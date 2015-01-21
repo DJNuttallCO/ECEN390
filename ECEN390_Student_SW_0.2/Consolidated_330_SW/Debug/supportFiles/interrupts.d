@@ -18,10 +18,10 @@ supportFiles/interrupts.o supportFiles/interrupts.d: \
  ../../HW3_bsp/ps7_cortexa9_0/include/xscutimer_hw.h \
  ../../HW3_bsp/ps7_cortexa9_0/include/xsysmon.h \
  ../../HW3_bsp/ps7_cortexa9_0/include/xsysmon_hw.h \
- C:\Users\hutch\ECEN390Winter2015\ECEN390_Student_SW_0.2\Consolidated_330_SW/supportFiles/leds.h \
- C:\Users\hutch\ECEN390Winter2015\ECEN390_Student_SW_0.2\Consolidated_330_SW/supportFiles/globalTimer.h \
+ C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW/supportFiles/leds.h \
+ C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW/supportFiles/globalTimer.h \
  ../../HW3_bsp/ps7_cortexa9_0/include/xparameters.h \
- C:\Users\hutch\ECEN390Winter2015\ECEN390_Student_SW_0.2\Consolidated_330_SW/supportFiles/intervalTimer.h
+ C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW/supportFiles/intervalTimer.h
 
 ../supportFiles/interrupts.h:
 
@@ -61,10 +61,10 @@ supportFiles/interrupts.o supportFiles/interrupts.d: \
 
 ../../HW3_bsp/ps7_cortexa9_0/include/xsysmon_hw.h:
 
-C:\Users\hutch\ECEN390Winter2015\ECEN390_Student_SW_0.2\Consolidated_330_SW/supportFiles/leds.h:
+C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW/supportFiles/leds.h:
 
-C:\Users\hutch\ECEN390Winter2015\ECEN390_Student_SW_0.2\Consolidated_330_SW/supportFiles/globalTimer.h:
+C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW/supportFiles/globalTimer.h:
 
 ../../HW3_bsp/ps7_cortexa9_0/include/xparameters.h:
 
-C:\Users\hutch\ECEN390Winter2015\ECEN390_Student_SW_0.2\Consolidated_330_SW/supportFiles/intervalTimer.h:
+C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW/supportFiles/intervalTimer.h:

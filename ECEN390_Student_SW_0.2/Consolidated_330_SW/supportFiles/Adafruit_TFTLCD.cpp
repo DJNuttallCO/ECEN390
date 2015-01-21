@@ -253,7 +253,7 @@ void Adafruit_TFTLCD::begin(uint16_t id) {
 
   } else if (id == 0x9341) {
 
-    uint16_t a, d;
+    //uint16_t a, d;
     driver = ID_9341;
 //     CS_ACTIVE;  // BLH: CS is always asserted.
     writeRegister8(ILI9341_SOFTRESET, 0);
@@ -765,6 +765,8 @@ void Adafruit_TFTLCD::setRotation(uint8_t x) {
    case 1:
      t = ILI9341_MADCTL_MX | ILI9341_MADCTL_MY | ILI9341_MADCTL_MV | ILI9341_MADCTL_BGR;
     break;
+   default:
+	   t = 0;
   }
    writeRegister8(ILI9341_MADCTL, t ); // MADCTL
    // For 9341, init default full-screen address window:

@@ -26,6 +26,7 @@ u32 intervalTimer_getTimerBaseAddress(u32 timerNumber) {
 	printf("intervalTimer_getTimerBaseAddress: timerNumber (%lu) is not between 0 and %d.\n\r",
 			timerNumber,
 			INTERVAL_TIMER_MAX_TIMER_INDEX);
+	timerBaseAddress = 0;
  }
   return timerBaseAddress;
 }

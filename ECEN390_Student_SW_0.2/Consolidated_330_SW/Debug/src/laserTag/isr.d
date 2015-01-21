@@ -1,6 +1,6 @@
 src/laserTag/isr.o src/laserTag/isr.d: ../src/laserTag/isr.c \
  ../src/laserTag/transmitter.h \
- C:\Users\hutch\ECEN390Winter2015\ECEN390_Student_SW_0.2\Consolidated_330_SW/supportFiles/interrupts.h \
+ C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW/supportFiles/interrupts.h \
  ../../HW3_bsp/ps7_cortexa9_0/include/xil_types.h \
  ../../HW3_bsp/ps7_cortexa9_0/include/xsysmon.h \
  ../../HW3_bsp/ps7_cortexa9_0/include/xil_types.h \
@@ -17,7 +17,7 @@ src/laserTag/isr.o src/laserTag/isr.d: ../src/laserTag/isr.c \
 
 ../src/laserTag/transmitter.h:
 
-C:\Users\hutch\ECEN390Winter2015\ECEN390_Student_SW_0.2\Consolidated_330_SW/supportFiles/interrupts.h:
+C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW/supportFiles/interrupts.h:
 
 ../../HW3_bsp/ps7_cortexa9_0/include/xil_types.h:
 

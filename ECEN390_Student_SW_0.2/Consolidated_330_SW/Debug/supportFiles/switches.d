@@ -1,7 +1,7 @@
 supportFiles/switches.o supportFiles/switches.d: \
  ../supportFiles/switches.c ../supportFiles/switches.h \
- C:\Users\hutch\ECEN390Winter2015\ECEN390_Student_SW_0.2\Consolidated_330_SW/supportFiles/leds.h \
- C:\Users\hutch\ECEN390Winter2015\ECEN390_Student_SW_0.2\Consolidated_330_SW/supportFiles/display.h \
+ C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW/supportFiles/leds.h \
+ C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW/supportFiles/display.h \
  ../../HW3_bsp/ps7_cortexa9_0/include/xil_io.h \
  ../../HW3_bsp/ps7_cortexa9_0/include/xil_types.h \
  ../../HW3_bsp/ps7_cortexa9_0/include/xpseudo_asm.h \
@@ -13,9 +13,9 @@ supportFiles/switches.o supportFiles/switches.d: \
 
 ../supportFiles/switches.h:
 
-C:\Users\hutch\ECEN390Winter2015\ECEN390_Student_SW_0.2\Consolidated_330_SW/supportFiles/leds.h:
+C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW/supportFiles/leds.h:
 
-C:\Users\hutch\ECEN390Winter2015\ECEN390_Student_SW_0.2\Consolidated_330_SW/supportFiles/display.h:
+C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW/supportFiles/display.h:
 
 ../../HW3_bsp/ps7_cortexa9_0/include/xil_io.h:
 
