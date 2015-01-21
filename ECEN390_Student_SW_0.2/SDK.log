@@ -1,0 +1,161 @@
+11:04:53 INFO  : FPGA configured successfully with bitstream "C:/Users/hutch/ECEN390Winter2015/ECEN390_Student_SW_0.2/HWTest3_hw_platform/system.bit"
+11:04:58 WARN  :  [Hsm 55-1484] MSS file doesn't have NAME. So assuming NAME as system
+11:04:58 ERROR :  [Hsm 55-1594] Core gpio of version 3.00.a not found in repositories
+ [Hsm 55-1594] Core gpio of version 3.00.a not found in repositories
+ [Hsm 55-1594] Core gpio of version 3.00.a not found in repositories
+ [Hsm 55-1594] Core devcfg of version 2.01.a not found in repositories
+ [Hsm 55-1594] Core dmaps of version 1.04.a not found in repositories
+ [Hsm 55-1594] Core dmaps of version 1.04.a not found in repositories
+ [Hsm 55-1594] Core emacps of version 1.02.a not found in repositories
+ [Hsm 55-1594] Core iicps of version 1.02.a not found in repositories
+ [Hsm 55-1594] Core qspips of version 2.00.a not found in repositories
+ [Hsm 55-1594] Core scugic of version 1.02.a not found in repositories
+ [Hsm 55-1594] Core uartps of version 1.03.a not found in repositories
+ [Hsm 55-1594] Core uartlite of version 2.00.a not found in repositories
+ [Hsm 55-1594] Core sysmon of version 5.02.a not found in repositories
+ [Hsm 55-1594] Core tmrctr of version 2.04.a not found in repositories
+ [Hsm 55-1594] Core tmrctr of version 2.04.a not found in repositories
+ [Hsm 55-1594] Core tmrctr of version 2.04.a not found in repositories
+ [Hsm 55-1594] Core spi of version 3.04.a not found in repositories
+ [Hsm 55-1594] Core gpio of version 3.00.a not found in repositories
+ [Hsm 55-1594] Core gpio of version 3.00.a not found in repositories
+ [Hsm 55-1594] Core standalone of version 3.08.a not found in repositories
+11:04:59 WARN  :  [Hsm 55-1484] MSS file doesn't have NAME. So assuming NAME as system
+11:04:59 ERROR :  [Hsm 55-1594] Core gpio of version 3.00.a not found in repositories
+ [Hsm 55-1594] Core gpio of version 3.00.a not found in repositories
+ [Hsm 55-1594] Core gpio of version 3.00.a not found in repositories
+ [Hsm 55-1594] Core devcfg of version 2.01.a not found in repositories
+ [Hsm 55-1594] Core dmaps of version 1.04.a not found in repositories
+ [Hsm 55-1594] Core dmaps of version 1.04.a not found in repositories
+ [Hsm 55-1594] Core emacps of version 1.02.a not found in repositories
+ [Hsm 55-1594] Core iicps of version 1.02.a not found in repositories
+ [Hsm 55-1594] Core qspips of version 2.00.a not found in repositories
+ [Hsm 55-1594] Core scugic of version 1.02.a not found in repositories
+ [Hsm 55-1594] Core uartps of version 1.03.a not found in repositories
+ [Hsm 55-1594] Core uartlite of version 2.00.a not found in repositories
+ [Hsm 55-1594] Core sysmon of version 5.02.a not found in repositories
+ [Hsm 55-1594] Core tmrctr of version 2.04.a not found in repositories
+ [Hsm 55-1594] Core tmrctr of version 2.04.a not found in repositories
+ [Hsm 55-1594] Core tmrctr of version 2.04.a not found in repositories
+ [Hsm 55-1594] Core spi of version 3.04.a not found in repositories
+ [Hsm 55-1594] Core gpio of version 3.00.a not found in repositories
+ [Hsm 55-1594] Core gpio of version 3.00.a not found in repositories
+ [Hsm 55-1594] Core standalone of version 3.08.a not found in repositories
+11:05:04 WARN  :  [Hsm 55-1484] MSS file doesn't have NAME. So assuming NAME as system
+11:05:04 ERROR :  [Hsm 55-1594] Core gpio of version 3.00.a not found in repositories
+ [Hsm 55-1594] Core gpio of version 3.00.a not found in repositories
+ [Hsm 55-1594] Core gpio of version 3.00.a not found in repositories
+ [Hsm 55-1594] Core devcfg of version 2.01.a not found in repositories
+ [Hsm 55-1594] Core dmaps of version 1.04.a not found in repositories
+ [Hsm 55-1594] Core dmaps of version 1.04.a not found in repositories
+ [Hsm 55-1594] Core emacps of version 1.02.a not found in repositories
+ [Hsm 55-1594] Core iicps of version 1.02.a not found in repositories
+ [Hsm 55-1594] Core qspips of version 2.00.a not found in repositories
+ [Hsm 55-1594] Core scugic of version 1.02.a not found in repositories
+ [Hsm 55-1594] Core uartps of version 1.03.a not found in repositories
+ [Hsm 55-1594] Core uartlite of version 2.00.a not found in repositories
+ [Hsm 55-1594] Core sysmon of version 5.02.a not found in repositories
+ [Hsm 55-1594] Core tmrctr of version 2.04.a not found in repositories
+ [Hsm 55-1594] Core tmrctr of version 2.04.a not found in repositories
+ [Hsm 55-1594] Core tmrctr of version 2.04.a not found in repositories
+ [Hsm 55-1594] Core spi of version 3.04.a not found in repositories
+ [Hsm 55-1594] Core gpio of version 3.00.a not found in repositories
+ [Hsm 55-1594] Core gpio of version 3.00.a not found in repositories
+ [Hsm 55-1594] Core standalone of version 3.08.a not found in repositories
+11:05:04 WARN  :  [Hsm 55-1484] MSS file doesn't have NAME. So assuming NAME as system
+11:05:17 WARN  :  [Hsm 55-1484] MSS file doesn't have NAME. So assuming NAME as system
+11:05:18 WARN  :  [Hsm 55-1484] MSS file doesn't have NAME. So assuming NAME as system
+ [Hsm 55-1484] MSS file doesn't have NAME. So assuming NAME as system
+11:05:25 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:06:10 WARN  :  [Hsm 55-1484] MSS file doesn't have NAME. So assuming NAME as system
+11:06:10 WARN  :  [Hsm 55-1484] MSS file doesn't have NAME. So assuming NAME as system
+11:06:10 WARN  :  [Hsm 55-1484] MSS file doesn't have NAME. So assuming NAME as system
+11:15:16 WARN  :  [Hsm 55-1484] MSS file doesn't have NAME. So assuming NAME as system
+ [Hsm 55-1484] MSS file doesn't have NAME. So assuming NAME as system
+11:15:27 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:15:31 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Unable to determine ELF start address: Unknown Error Occured
+    : C:/Users/hutch/ECEN390Winter2015/ECEN390_Student_SW_0.2/Consolidated_330_SW/Debug/Consolidated_330_SW.elf
+
+	at com.xilinx.sdk.targetmanager.internal.TM.getStartAddress(TM.java:983)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(AppRunner.java:149)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:534)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:252)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1251)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+11:16:43 INFO  : FPGA configured successfully with bitstream "C:/Users/hutch/ECEN390Winter2015/ECEN390_Student_SW_0.2/HWTest3_hw_platform/system.bit"
+11:17:27 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+11:19:04 INFO  : FPGA configured successfully with bitstream "C:/Users/hutch/ECEN390Winter2015/ECEN390_Student_SW_0.2/HWTest3_hw_platform/system.bit"
+11:19:18 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:19:56 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+11:22:52 INFO  : FPGA configured successfully with bitstream "C:/Users/hutch/ECEN390Winter2015/ECEN390_Student_SW_0.2/HWTest3_hw_platform/system.bit"
+11:23:08 INFO  : init_user is completed.
+11:23:08 INFO  : ps7_init is completed.
+11:23:09 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:32:42 INFO  : FPGA configured successfully with bitstream "C:/Users/hutch/ECEN390Winter2015/ECEN390_Student_SW_0.2/HWTest3_hw_platform/system.bit"
+11:32:50 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:33:08 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:33:08 ERROR : Port COM15 is already in use.
+11:34:15 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:35:59 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:36:36 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:37:41 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:51:17 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:53:27 WARN  :  [Hsm 55-1484] MSS file doesn't have NAME. So assuming NAME as system
+11:53:27 ERROR :  [Hsm 55-1594] Core gpio of version 3.00.a not found in repositories
+ [Hsm 55-1594] Core gpio of version 3.00.a not found in repositories
+ [Hsm 55-1594] Core gpio of version 3.00.a not found in repositories
+ [Hsm 55-1594] Core devcfg of version 2.01.a not found in repositories
+ [Hsm 55-1594] Core dmaps of version 1.04.a not found in repositories
+ [Hsm 55-1594] Core dmaps of version 1.04.a not found in repositories
+ [Hsm 55-1594] Core emacps of version 1.02.a not found in repositories
+ [Hsm 55-1594] Core iicps of version 1.02.a not found in repositories
+ [Hsm 55-1594] Core qspips of version 2.00.a not found in repositories
+ [Hsm 55-1594] Core scugic of version 1.02.a not found in repositories
+ [Hsm 55-1594] Core uartps of version 1.03.a not found in repositories
+ [Hsm 55-1594] Core uartlite of version 2.00.a not found in repositories
+ [Hsm 55-1594] Core sysmon of version 5.02.a not found in repositories
+ [Hsm 55-1594] Core tmrctr of version 2.04.a not found in repositories
+ [Hsm 55-1594] Core tmrctr of version 2.04.a not found in repositories
+ [Hsm 55-1594] Core tmrctr of version 2.04.a not found in repositories
+ [Hsm 55-1594] Core spi of version 3.04.a not found in repositories
+ [Hsm 55-1594] Core gpio of version 3.00.a not found in repositories
+ [Hsm 55-1594] Core gpio of version 3.00.a not found in repositories
+ [Hsm 55-1594] Core standalone of version 3.08.a not found in repositories
+11:53:28 WARN  :  [Hsm 55-1484] MSS file doesn't have NAME. So assuming NAME as system
+11:53:28 ERROR :  [Hsm 55-1594] Core gpio of version 3.00.a not found in repositories
+ [Hsm 55-1594] Core gpio of version 3.00.a not found in repositories
+ [Hsm 55-1594] Core gpio of version 3.00.a not found in repositories
+ [Hsm 55-1594] Core devcfg of version 2.01.a not found in repositories
+ [Hsm 55-1594] Core dmaps of version 1.04.a not found in repositories
+ [Hsm 55-1594] Core dmaps of version 1.04.a not found in repositories
+ [Hsm 55-1594] Core emacps of version 1.02.a not found in repositories
+ [Hsm 55-1594] Core iicps of version 1.02.a not found in repositories
+ [Hsm 55-1594] Core qspips of version 2.00.a not found in repositories
+ [Hsm 55-1594] Core scugic of version 1.02.a not found in repositories
+ [Hsm 55-1594] Core uartps of version 1.03.a not found in repositories
+ [Hsm 55-1594] Core uartlite of version 2.00.a not found in repositories
+ [Hsm 55-1594] Core sysmon of version 5.02.a not found in repositories
+ [Hsm 55-1594] Core tmrctr of version 2.04.a not found in repositories
+ [Hsm 55-1594] Core tmrctr of version 2.04.a not found in repositories
+ [Hsm 55-1594] Core tmrctr of version 2.04.a not found in repositories
+ [Hsm 55-1594] Core spi of version 3.04.a not found in repositories
+ [Hsm 55-1594] Core gpio of version 3.00.a not found in repositories
+ [Hsm 55-1594] Core gpio of version 3.00.a not found in repositories
+ [Hsm 55-1594] Core standalone of version 3.08.a not found in repositories
+11:53:37 WARN  :  [Hsm 55-1484] MSS file doesn't have NAME. So assuming NAME as system
+11:53:40 WARN  :  [Hsm 55-1484] MSS file doesn't have NAME. So assuming NAME as system
+11:54:20 WARN  :  [Hsm 55-1484] MSS file doesn't have NAME. So assuming NAME as system
+11:54:20 WARN  :  [Hsm 55-1484] MSS file doesn't have NAME. So assuming NAME as system
+11:54:23 WARN  :  [Hsm 55-1484] MSS file doesn't have NAME. So assuming NAME as system
+11:54:36 WARN  :  [Hsm 55-1484] MSS file doesn't have NAME. So assuming NAME as system
+11:54:36 WARN  :  [Hsm 55-1484] MSS file doesn't have NAME. So assuming NAME as system
+12:04:45 WARN  :  [Hsm 55-1484] MSS file doesn't have NAME. So assuming NAME as system
+ [Hsm 55-1484] MSS file doesn't have NAME. So assuming NAME as system
+12:04:56 INFO  : FPGA configured successfully with bitstream "C:/Users/hutch/ECEN390Winter2015/ECEN390_Student_SW_0.2/HWTest3_hw_platform/system.bit"
+12:05:08 INFO  : Processor reset is completed for ps7_cortexa9_0
+12:58:35 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 

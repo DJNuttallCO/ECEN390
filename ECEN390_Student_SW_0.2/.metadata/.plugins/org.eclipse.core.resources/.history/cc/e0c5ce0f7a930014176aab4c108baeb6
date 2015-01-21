@@ -1,0 +1,49 @@
+/*
+ * filter.h
+ *
+ *  Created on: Dec 19, 2014
+ *      Author: hutch
+ */
+
+#ifndef FILTER_H_
+#define FILTER_H_
+
+#include <stdint.h>
+#include "queue.h"
+
+#define FILTER_IIR_FILTER_COUNT 10			// You need this many IIR filters.
+#define FILTER_FIR_DECIMATION_FACTOR 10	// Filter needs this many new inputs to compute a new output.
+#define FILTER_INPUT_PULSE_WIDTH 200		// This is the width of the pulse you are looking for, in terms of sample count.
+
+// Filtering routines for the laser-tag project.
+// Filtering is performed by a two-stage filter, as described below.
+
+// 1. First filter is a decimating FIR filter with a configurable number of taps and decimation factor.
+// 2. The output from the decimating FIR filter is passed through a bank of 10 IIR filters. The
+// characteristics of the IIR filter are fixed.
+
+// The decimation factor determines how many new samples must be read for each new filter output.
+uint16_t filter_getFirDecimationFactor();
+
+// Must call this prior to using any filter functions.
+void filter_init();
+
+// Use this to copy an input into the input queue.
+void filter_addNewInput(double x);
+
+double filter_firFilter();
+
+// Use this to invoke a single iir filter.
+double filter_iirFilter(uint16_t filterNumber);
+
+// Use this to retrieve the computed z-values.
+queue_t* filter_retrieveZQueue();
+
+// Use this to compute the power for values contained in a queue.
+double filter_computePower(uint16_t filterNumber);
+
+queue_t* filter_getFirOutputQueue();
+
+bool filter_runTest(bool debugPrintFlag);
+
+#endif /* FILTER_H_ */

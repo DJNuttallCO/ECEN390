@@ -1,0 +1,80 @@
+/*
+ * queue.h
+ *
+ *  Created on: Mar 25, 2014
+ *      Author: hutch
+ */
+
+#ifndef QUEUE_H_
+#define QUEUE_H_
+
+#include <stdint.h>
+#include <stdbool.h>
+
+typedef uint32_t queue_index_t;
+typedef double queue_data_t;
+typedef uint32_t queue_size_t;
+
+typedef struct {
+  queue_index_t indexIn;
+  queue_index_t indexOut;
+  queue_size_t size;
+//  queue_size_t elementsPushed;
+  queue_size_t elementCount;
+  queue_data_t * data;
+} queue_t;
+
+//#define INCREMENT_INDEX(index,size) (index == (size-1)) ? 0 : (index+1)
+
+void queue_init(queue_t* q, queue_size_t size);
+queue_size_t queue_size(queue_t* q);
+bool queueFull(queue_t* q);
+//#define QUEUE_FULL(q) (q->indexOut) == (INCREMENT_INDEX(q->indexIn, q->size))
+
+bool queue_empty(queue_t* q);
+//#define QUEUE_EMPTY(q) ((q)->indexIn) == ((q)->indexOut)
+
+void queue_push(queue_t* q, queue_data_t value);
+queue_data_t queue_pop(queue_t* q);
+void queue_overwritePush(queue_t* q, queue_data_t value);
+queue_data_t queue_readElementAt(queue_t* q, queue_index_t index);
+
+
+queue_size_t queue_elementCount(queue_t* q);
+
+void gueue_garbageCollect(queue_t* q);
+void queue_print(queue_t* q);
+
+queue_size_t queue_elementsPushed(queue_t* q);
+
+// Provides iteration over the contents of the internal array.
+// Use these functions inside a do-while-loop as shown below.
+// You will access elements in FIFO order.
+#define QUEUE_START_INDEX(q) (q)->indexOut
+#define QUEUE_INCREMENT_INDEX(size, index) (index == (size-1)) ? 0 : (index+1)
+#define QUEUE_END_INDEX(q) (q)->indexIn
+#define QUEUE_GET_ELEMENT(q, index) (q)->data[index]
+//queue_t testQueue;
+//queue_init(&testQueue, 5);
+//queue_push(&testQueue, 1);
+//queue_push(&testQueue, 2);
+//queue_push(&testQueue, 3);
+//queue_push(&testQueue, 4);
+//queue_pop(&testQueue);
+//queue_push(&testQueue, 5);
+//queue_pop(&testQueue);
+//queue_push(&testQueue, 6);
+//queue_print(&testQueue);
+//int testQueueSize = queue_size(&testQueue);
+//int myIndex;
+//int startIndex = QUEUE_START_INDEX(&testQueue);
+//int endIndex = QUEUE_END_INDEX(&testQueue);
+//for (myIndex = startIndex; myIndex != endIndex; myIndex = QUEUE_INCREMENT_INDEX(testQueueSize, myIndex)) {
+//  int myElement = QUEUE_GET_ELEMENT(&testQueue, myIndex);
+//  printf("element[%d]:%d\n\r", myIndex, myElement);
+//}
+
+int queue_runTest();
+
+
+#endif /* QUEUE_H_ */

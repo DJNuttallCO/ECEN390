@@ -1,0 +1,35 @@
+/*
+ * histogram.h
+ *
+ *  Created on: Jan 1, 2015
+ *      Author: hutch
+ */
+
+#ifndef HISTOGRAM_H_
+#define HISTOGRAM_H_
+
+#define CHAR_WIDTH 5
+#define CHAR_HEIGHT 8
+#define TEXT_SIZE 2
+#define DISPLAY_HEIGHT 240
+#define DISPLAY_WIDTH 320
+
+#define HISTOGRAM_MAX_BAR_COUNT 10	// You can have up to 10 bars on your histogram.
+#define HISTOGRAM_BAR_COUNT 10			// This is the number of histogram bars that you want.
+#define HISTOGRAM_BAR_X_GAP 5		// This is the gap, in pixels, between each bar.
+#define HISTOGRAM_BAR_Y_GAP (CHAR_HEIGHT * TEXT_SIZE)	// Leave room for a small label.
+#define HISTOGRAM_MAX_BAR_DATA_IN_PIXELS (DISPLAY_HEIGHT - HISTOGRAM_BAR_Y_GAP)	// Max value for histogram bar, in pixels.
+#define HISTOGRAM_MAX_BAR_LABEL_WIDTH 2	// Defined in terms of characters.
+
+#include <stdint.h>
+
+typedef uint16_t histogram_index_t;
+typedef uint16_t histogram_data_t;
+
+void histogram_init();
+
+void histogram_setBarData(histogram_index_t barIndex, histogram_data_t data);
+void histogram_updateDisplay();
+void histogram_runTest();
+
+#endif /* HISTOGRAM_H_ */

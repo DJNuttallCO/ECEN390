@@ -1,0 +1,33 @@
+/*
+ * timerIsr.c
+ *
+ *  Created on: Jan 2, 2015
+ *      Author: hutch
+ */
+
+#include "transmitter.h"
+#include "supportFiles/interrupts.h"
+#include "queue.h"
+#include "xsysmon.h"
+
+//#define ADC_DATA_QUEUE_SIZE 100000
+//queue_t adcDataQueue1;
+
+static uint64_t isr_totalXadcSampleCount = 0;
+
+//queue_data_t isr_popAdcQueueData() {return queue_pop(&adcDataQueue1);}
+//bool isr_adcQueueEmpty() {return queue_empty(&adcDataQueue1);}
+//queue_size_t isr_adcQueueElementCount() {return queue_elementCount(&adcDataQueue1);}
+uint64_t isr_getTotalAdcSampleCount() {return isr_totalXadcSampleCount;}
+
+void isr_init() {
+}
+
+void isr_function() {
+	// This assumes that the ADC value was read and collected.
+	// This code is provided so you can see how things work.
+	// You will need to write the code that actually reads the ADC and stores the data in a queue.
+	isr_totalXadcSampleCount++;
+}
+
+

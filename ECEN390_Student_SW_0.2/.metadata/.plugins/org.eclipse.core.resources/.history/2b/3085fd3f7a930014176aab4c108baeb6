@@ -1,0 +1,168 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "queue.h"
+
+// Standard queue implementation that leaves one spot empty so easier to check for full/empty.
+void queue_init(queue_t* q, queue_size_t size) {
+  q->indexIn = 0;
+  q->indexOut = 0;
+//  q->elementsPushed = 0;
+  q->elementCount = 0;
+  q->size = size+1;	// Add one additional location for the empty location.
+  q->data = (queue_data_t *) malloc(size * sizeof(queue_data_t));
+}
+
+queue_size_t queue_size(queue_t* q) {return q->size-1;}	// Tell the user size in terms of usable locations.
+
+// Helper function. Not visible to user.
+queue_index_t incrementIndex(queue_index_t index, queue_size_t size) {
+  // don't use % as it can be tricky - % has machine-dependent behavior if either operand is negative.
+  // Just check to see if you are at the edges. Less expensive.
+  if (index == size-1)
+    // Rolling over.
+    return 0;
+  else
+    // Not rolling over; just return index + 1.
+    return index + 1;
+}
+
+bool queue_full(queue_t* q) {
+  // The queue is full if, when you increment the in-index, you are equal to the out-index.
+  return (q->indexOut == incrementIndex(q->indexIn, q->size));
+}
+
+bool queue_empty(queue_t* q) {
+  // Empty if the in and out pointers are equal.
+  return (q->indexIn == q->indexOut);
+}
+
+// Does nothing if the queue is full.
+void queue_push(queue_t* q, queue_data_t value) {
+  // Always check for full before a push.
+//	q->elementsPushed++;
+  // Always check for full before a push.
+  if (!queue_full(q)) {
+    q->data[q->indexIn] = value;                       // Ok, not full, push the data in.
+    q->indexIn = incrementIndex(q->indexIn, q->size);  // Increment the in pointer.
+    q->elementCount++;
+  } else {
+    // Print an error message if you try to push when already full.
+    printf("queue is full!\n\r");
+  }
+}
+
+// Overwrites old data if full by popping the oldest data before doing the push.
+void queue_overwritePush(queue_t* q, queue_data_t value) {
+//	q->elementsPushed++;
+	q->elementCount++;
+  // Always check for full before a push.
+  if (queue_full(q)) {
+    queue_pop(q);
+  }
+  q->data[q->indexIn] = value;                       // Ok, not full, push the data in.
+  q->indexIn = incrementIndex(q->indexIn, q->size);  // Increment the in pointer.
+}
+
+// Does nothing if the queue is empty.
+queue_data_t queue_pop(queue_t* q) {
+  queue_data_t returnValue=0;
+  // Always check for empty before trying to pop anything.
+  if (!queue_empty(q)) {
+    // Ok, not empty, grab the data.
+    returnValue = q->data[q->indexOut];
+    // Increment the pointer.
+    q->indexOut = incrementIndex(q->indexOut, q->size);
+    q->elementCount--;
+  } else {
+    // Print an error message when popping from an empty stack.
+    printf("queue is empty!\n\r");
+  }
+  return returnValue;
+}
+
+void queue_print(queue_t* q) {
+  uint32_t indexOutTmp;
+  if (queue_empty(q)) {
+    printf("Queue is empty.\n");
+    return;
+  }
+  // Queue is not empty, print out its contents but don't disturb its state. Use a temp out index.
+  // This for-loop looks a little complicated. Just study it carefully and you will see what it does.
+  // You should be able to study this syntax to see how to access the data slot in the functions
+  // that you need to write.
+  int index = 0;  // Provide a reference to see the order of elements in the queue. 0 is the first element.
+  // Larger values were added later.
+  for (indexOutTmp = q->indexOut; indexOutTmp != q->indexIn; indexOutTmp = incrementIndex(indexOutTmp, q->size)) {
+    printf("[index:%d][address:%ld]:%g\n", index, indexOutTmp, q->data[indexOutTmp]);
+    index++;
+  }
+}
+
+// DONT DELETE THIS FUNCTION. It is an alternative way to compute the element count. It has been tested, so DONT DELETE.
+// returns the number of elements contained in the queue. This code computes the value when requested.
+//queue_size_t queue_elementCount(queue_t* q) {
+//	queue_size_t elementCount;
+//	// 3 Cases: empty, not-wrapped, wrapped.
+//	// Check to see if you are wrapped.
+//	if (queue_empty(q))									// Empty, just return 0.
+//		elementCount = 0;
+//	else if (q->indexIn > q->indexOut)	// Not wrapped.
+//		elementCount = (q->indexIn - q->indexOut);
+//	else
+//		elementCount = ((q->size - q->indexOut) + (q->indexOut-1));
+//	if (q->elementCount != elementCount) {
+//		printf("ERROR!!!!! Element counts do not match (computed: %ld), (accumulated: %ld)", elementCount, q->elementCount);
+//	}
+//	return elementCount;
+//}
+//
+
+// This version of queue_elementCount simply returns the value that has been accumulated during pushes and pops.
+queue_size_t queue_elementCount(queue_t*q) {
+	return q->elementCount;
+}
+
+// Just free the queue.
+void gueue_garbageCollect(queue_t* q) {
+  free(q);
+}
+
+// Allows random access of the queue contents. The index is relative; 0: the data at the indexOut pointer.
+// Non-0: data offset from the indexOut pointer. Wrap-around occurs as necessary. Nothing is popped. To
+queue_data_t queue_readElementAt(queue_t* q, queue_index_t index) {
+	queue_index_t address;
+	queue_size_t elementCount = queue_elementCount(q);
+	if (!(index < elementCount)) {
+		printf("ERROR!!! index (%ld) for queue_readElementAt() must be no more than than element count-1 (%ld)\n\r", index, elementCount-1);
+		return 0;
+	}
+	if ((q->indexOut + index) < q->size) {
+		address = q->indexOut + index;
+//		printf("index->%ld, address->%ld, value:%g\r\n", index, address, q->data[address]);
+		return q->data[address];								// No wrap-around access.
+	} else {
+		address = (q->indexOut + index) - (q->size);
+//		printf("index->%ld, address (wrapped)->%ld, value:%g\r\n", index, address, q->data[address]);
+		return q->data[address];	// wrap-around access.
+	}
+}
+
+//queue_size_t queue_elementsPushed(queue_t* q) {return q->elementsPushed;}
+
+#define TEST_QUEUE_SIZE 4
+int queue_runTest() {
+  // Declare a queue.
+  queue_t testQueue;
+  queue_init(&testQueue, TEST_QUEUE_SIZE);
+  queue_push(&testQueue, 1);
+  queue_push(&testQueue, 2);
+  queue_push(&testQueue, 3);
+//  queuePush(&testQueue, 4);
+  queue_print(&testQueue);
+  return 0;
+}
+
+
+
+
+
