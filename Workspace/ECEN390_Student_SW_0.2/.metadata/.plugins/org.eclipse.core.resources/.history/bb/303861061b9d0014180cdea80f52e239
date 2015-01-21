@@ -1,0 +1,171 @@
+/*
+ * queue.c
+ *
+ *  Created on: Jan 15, 2015
+ *      Author: danilob
+ */
+
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "queue.h"
+#define QUEUE_SIZE 4
+
+
+
+//auxiliar function to ahndle the reset of Index in neede for the queue
+queue_index_t incrementIndex(queue_index_t index, queue_size_t size) //functionw ill increment queue index
+{
+	if(index == size)
+		index = 0;
+	else
+		index++;
+	return index;
+}
+
+// Standard queue implementation that leaves one spot empty so easier to check for full/empty.
+void queue_init(queue_t* q, queue_size_t size) {
+  q->indexIn = 0;
+  q->indexOut = 0;
+  q->elementCount = 0;
+  q->size = size+1;	// Add one additional location for the empty location.
+  q->data = (queue_data_t *) malloc(q->size * sizeof(queue_data_t));
+}
+
+queue_size_t queue_size(queue_t* q);
+
+// Returns true if the queue is full.
+bool queueFull(queue_t* q)
+{
+	if(q->elementCount == q->size)
+		return 1;
+	return 0;
+}
+
+// Returns true if the queue is empty.
+bool queue_empty(queue_t* q)
+{
+	if(q->elementCount == 0)
+		return 1;
+	return 0;
+}
+
+// Pushes a new element into the queue. Reports an error if the queue is full.
+void queue_push(queue_t* q, queue_data_t value)
+{
+	if(queueFull(q))
+		printf("Cannot insert, full queue!");  // This prints on the console.
+	else
+	{
+		q->data[q->indexIn] = value;
+		q->elementCount++;
+		q->indexIn = incrementIndex(q->indexIn, q->size);
+	}
+
+}
+
+// Removes the oldest element in the queue.
+queue_data_t queue_pop(queue_t* q)
+{
+	queue_data_t rdata;
+	if(queue_empty(q))
+		printf("Queue is empty");  // This prints on the console.
+	else
+	{
+		rdata = q->data[q->indexOut];
+		q->elementCount--;
+		q->indexOut = incrementIndex(q->indexOut, q->size);
+		return rdata;
+	}
+	return 0;
+}
+
+// Pushes a new element into the queue, making room by removing the oldest element.
+void queue_overwritePush(queue_t* q, queue_data_t value)
+{
+	if(queueFull(q))
+	{
+		printf("warning Queue is being overwritten");  // This prints on the console.
+		q->data[q->indexIn] = value;
+		q->elementCount++;
+		q->indexIn = incrementIndex(q->indexIn, q->size);
+	}
+	else
+		queue_push(q,value);
+}
+
+// Provides random-access read capability to the queue.
+// Low-valued indexes access older queue elements while higher-value indexes access newer elements
+// (according to the order that they were added).
+queue_data_t queue_readElementAt(queue_t* q, queue_index_t index)
+{
+	if(queue_empty(q))
+		printf("Queue is empty");  // This prints on the console.
+	else
+	{
+		if(index < q->elementCount)
+		{
+			if((index + q->indexOut) < q->size)
+				return q->data[index+ q->indexOut];
+			else
+				return q->data[q->size - (index+ q->indexOut) -1];
+		}
+	}
+	return 0;
+}
+
+// Returns a count of the elements currently contained in the queue.
+queue_size_t queue_elementCount(queue_t* q)
+{
+	return q->elementCount;
+}
+
+// Prints the current contents of the queue. Handy for debugging.
+void queue_print(queue_t* q)
+{
+	queue_index_t indexOutTmp;
+    if(queue_empty(q))
+    	printf("Queue is empty.\n");
+    else
+    {
+    	for (indexOutTmp = q->indexOut; indexOutTmp != q->indexIn; indexOutTmp = incrementIndex(indexOutTmp, q->size))
+    	    printf("%lf\n", q->data[indexOutTmp]);
+    }
+}
+
+// Performs a comprehensive test of all queue functions.
+int queue_runTest()
+{
+	  queue_t q;
+	  queue_init(&q, QUEUE_SIZE);
+	  queue_push(&q, 1);
+	  queue_push(&q, 2);
+	  queue_push(&q, 3);
+
+	  printf("printing contents of queue.\n");
+	  queue_print(&q);
+	  printf("done printing contents of queue.\n");
+
+	  printf("%lf\n", queue_pop(&q));
+	  queue_push(&q, 4);
+	  printf("%lf\n", queue_pop(&q));
+	  queue_push(&q, 5);
+	  printf("%lf\n", queue_pop(&q));
+
+	  printf("printing contents of queue.\n");
+	  queue_print(&q);
+	  printf("done printing contents of queue.\n");
+
+	  printf("%lf\n", queue_pop(&q));
+	  printf("%lf\n", queue_pop(&q));
+	  printf("%lf\n", queue_pop(&q));
+	  system("pause");
+	  return 1;
+}
+// Just free the malloc'd storage.
+void gueue_garbageCollect(queue_t* q)
+{
+  free(q->data);
+}

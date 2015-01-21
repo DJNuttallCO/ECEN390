@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;queue.c&apos; to &apos;laserTag&apos;" description="Move &apos;queue.c&apos; to &apos;laserTag&apos;" destination="src/laserTag" element1="queue.c" element2="queue.h" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="2" stamp="1421369215682" updateReferences="true"/>
+</session>

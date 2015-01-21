@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="" key="HWTest3_hw_platform-bmmFile"/>
+	<item value="HWTest3_hw_platform" key="programfpga.hwplatform"/>
+	<item value="system.bit" key="HWTest3_hw_platform-bitFile"/>
+	<item value="true" key="HWTest3_hw_platform-runResetZynq"/>
+	<item value="Local" key="HWTest3_hw_platform-target"/>
+</section>
