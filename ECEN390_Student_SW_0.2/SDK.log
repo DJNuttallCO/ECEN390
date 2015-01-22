@@ -159,3 +159,29 @@ java.lang.RuntimeException: Unable to determine ELF start address: Unknown Error
 12:04:56 INFO  : FPGA configured successfully with bitstream "C:/Users/hutch/ECEN390Winter2015/ECEN390_Student_SW_0.2/HWTest3_hw_platform/system.bit"
 12:05:08 INFO  : Processor reset is completed for ps7_cortexa9_0
 12:58:35 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+16:51:57 INFO  : FPGA configured successfully with bitstream "C:/Workspace390TA/ECEN390_Student_SW_0.2/HWTest3_hw_platform/system.bit"
+16:52:11 INFO  : init_user is completed.
+16:52:11 INFO  : ps7_init is completed.
+16:52:12 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:53:21 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:54:07 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:54:56 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:56:16 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:58:57 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:01:36 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:02:36 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:05:04 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:05:49 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:38:02 INFO  : FPGA configured successfully with bitstream "C:/Workspace390TA/ECEN390_Student_SW_0.2/HWTest3_hw_platform/system.bit"
+18:38:09 INFO  : init_user is completed.
+18:38:09 INFO  : ps7_init is completed.
+18:38:09 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:38:09 ERROR : No such port: COM32
+18:40:00 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:41:10 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:41:56 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:43:59 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:45:39 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:49:41 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:50:18 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:50:46 INFO  : Processor reset is completed for ps7_cortexa9_0

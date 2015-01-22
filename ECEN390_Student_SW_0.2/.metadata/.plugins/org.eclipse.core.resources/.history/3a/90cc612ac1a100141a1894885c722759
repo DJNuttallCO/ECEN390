@@ -1,0 +1,29 @@
+/*
+ * queue.c
+ *
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "queue.h"
+
+// Standard queue implementation that leaves one spot empty so easier to check for full/empty.
+void queue_init(queue_t* q, queue_size_t size) {
+  q->indexIn = 0;
+  q->indexOut = 0;
+  q->elementCount = 0;
+  q->size = size+1;	// Add one additional location for the empty location.
+  q->data = (queue_data_t *) malloc(q->size * sizeof(queue_data_t));
+}
+
+// Just free the malloc'd storage.
+void gueue_garbageCollect(queue_t* q) {
+  free(q->data);
+}
+
+// Prints in order of array index
+void queue_debugPrint(queue_t* q) {
+	for (int i=0; i<q->size; i++) {
+	  printf("data[%d]:%le\n\r", i, data[i]);
+	}
+}

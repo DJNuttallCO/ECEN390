@@ -6098,3 +6098,1420 @@ arm-xilinx-eabi-size Consolidated_330_SW.elf  |tee "Consolidated_330_SW.elf.size
  135096	   3176	12005536	12143808	 b94cc0	Consolidated_330_SW.elf
 Finished building: Consolidated_330_SW.elf.size
  
+15:41:23 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+Finished building: ../src/laserTag/queue.c
+ 
+Building target: Consolidated_330_SW.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../HW3_bsp/ps7_cortexa9_0/lib -o "Consolidated_330_SW.elf"  ./supportFiles/Adafruit_GFX.o ./supportFiles/Adafruit_STMPE610.o ./supportFiles/Adafruit_TFTLCD.o ./supportFiles/Print.o ./supportFiles/WString.o ./supportFiles/buttons.o ./supportFiles/circularBuffer.o ./supportFiles/display.o ./supportFiles/glcdfont.o ./supportFiles/globalTimer.o ./supportFiles/interrupts.o ./supportFiles/intervalTimer.o ./supportFiles/lcd.o ./supportFiles/leds.o ./supportFiles/mio.o ./supportFiles/new.o ./supportFiles/spi.o ./supportFiles/switches.o ./supportFiles/utils.o  ./src/laserTag/detector.o ./src/laserTag/isr.o ./src/laserTag/main.o ./src/laserTag/queue.o ./src/laserTag/transmitter.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: Consolidated_330_SW.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size Consolidated_330_SW.elf  |tee "Consolidated_330_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 135096	   3176	12005536	12143808	 b94cc0	Consolidated_330_SW.elf
+Finished building: Consolidated_330_SW.elf.size
+ 
+15:41:30 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+make: Nothing to be done for `all'.
+15:42:28 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+make: Nothing to be done for `all'.
+15:42:44 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+Finished building: ../src/laserTag/queue.c
+ 
+Building target: Consolidated_330_SW.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../HW3_bsp/ps7_cortexa9_0/lib -o "Consolidated_330_SW.elf"  ./supportFiles/Adafruit_GFX.o ./supportFiles/Adafruit_STMPE610.o ./supportFiles/Adafruit_TFTLCD.o ./supportFiles/Print.o ./supportFiles/WString.o ./supportFiles/buttons.o ./supportFiles/circularBuffer.o ./supportFiles/display.o ./supportFiles/glcdfont.o ./supportFiles/globalTimer.o ./supportFiles/interrupts.o ./supportFiles/intervalTimer.o ./supportFiles/lcd.o ./supportFiles/leds.o ./supportFiles/mio.o ./supportFiles/new.o ./supportFiles/spi.o ./supportFiles/switches.o ./supportFiles/utils.o  ./src/laserTag/detector.o ./src/laserTag/isr.o ./src/laserTag/main.o ./src/laserTag/queue.o ./src/laserTag/transmitter.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: Consolidated_330_SW.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size Consolidated_330_SW.elf  |tee "Consolidated_330_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 135160	   3176	12005536	12143872	 b94d00	Consolidated_330_SW.elf
+Finished building: Consolidated_330_SW.elf.size
+ 
+15:59:23 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+../src/laserTag/queue.c: In function 'void queue_debugPrint(queue_t*)':
+../src/laserTag/queue.c:26:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i=0; i<q->size; i++) {
+                     ^
+../src/laserTag/queue.c:27:34: error: 'data' was not declared in this scope
+    printf("data[%d]:%le\n\r", i, data[i]);
+                                  ^
+make: *** [src/laserTag/queue.o] Error 1
+15:59:34 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+../src/laserTag/queue.c: In function 'void queue_debugPrint(queue_t*)':
+../src/laserTag/queue.c:27:34: error: 'data' was not declared in this scope
+    printf("data[%d]:%le\n\r", i, data[i]);
+                                  ^
+make: *** [src/laserTag/queue.o] Error 1
+15:59:48 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+Finished building: ../src/laserTag/queue.c
+ 
+Building target: Consolidated_330_SW.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../HW3_bsp/ps7_cortexa9_0/lib -o "Consolidated_330_SW.elf"  ./supportFiles/Adafruit_GFX.o ./supportFiles/Adafruit_STMPE610.o ./supportFiles/Adafruit_TFTLCD.o ./supportFiles/Print.o ./supportFiles/WString.o ./supportFiles/buttons.o ./supportFiles/circularBuffer.o ./supportFiles/display.o ./supportFiles/glcdfont.o ./supportFiles/globalTimer.o ./supportFiles/interrupts.o ./supportFiles/intervalTimer.o ./supportFiles/lcd.o ./supportFiles/leds.o ./supportFiles/mio.o ./supportFiles/new.o ./supportFiles/spi.o ./supportFiles/switches.o ./supportFiles/utils.o  ./src/laserTag/detector.o ./src/laserTag/isr.o ./src/laserTag/main.o ./src/laserTag/queue.o ./src/laserTag/transmitter.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: Consolidated_330_SW.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size Consolidated_330_SW.elf  |tee "Consolidated_330_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 135256	   3176	12005536	12143968	 b94d60	Consolidated_330_SW.elf
+Finished building: Consolidated_330_SW.elf.size
+ 
+16:02:16 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+../src/laserTag/queue.c: In function 'void queue_init(queue_t*, queue_size_t)':
+../src/laserTag/queue.c:18:10: error: invalid conversion from 'int' to 'queue_data_t* {aka double*}' [-fpermissive]
+   q->data=-1;
+          ^
+make: *** [src/laserTag/queue.o] Error 1
+16:02:58 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+../src/laserTag/queue.c: In function 'void queue_init(queue_t*, queue_size_t)':
+../src/laserTag/queue.c:18:10: error: cannot convert 'double' to 'queue_data_t* {aka double*}' in assignment
+   q->data=-1.0;
+          ^
+make: *** [src/laserTag/queue.o] Error 1
+16:03:05 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+../src/laserTag/queue.c: In function 'void queue_init(queue_t*, queue_size_t)':
+../src/laserTag/queue.c:18:11: error: cannot convert 'double' to 'queue_data_t* {aka double*}' in assignment
+   q->data = -1.0;
+           ^
+make: *** [src/laserTag/queue.o] Error 1
+16:03:11 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+../src/laserTag/queue.c: In function 'void queue_init(queue_t*, queue_size_t)':
+../src/laserTag/queue.c:18:11: error: invalid conversion from 'int' to 'queue_data_t* {aka double*}' [-fpermissive]
+   q->data = 1;
+           ^
+make: *** [src/laserTag/queue.o] Error 1
+16:03:38 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+Finished building: ../src/laserTag/queue.c
+ 
+Building target: Consolidated_330_SW.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../HW3_bsp/ps7_cortexa9_0/lib -o "Consolidated_330_SW.elf"  ./supportFiles/Adafruit_GFX.o ./supportFiles/Adafruit_STMPE610.o ./supportFiles/Adafruit_TFTLCD.o ./supportFiles/Print.o ./supportFiles/WString.o ./supportFiles/buttons.o ./supportFiles/circularBuffer.o ./supportFiles/display.o ./supportFiles/glcdfont.o ./supportFiles/globalTimer.o ./supportFiles/interrupts.o ./supportFiles/intervalTimer.o ./supportFiles/lcd.o ./supportFiles/leds.o ./supportFiles/mio.o ./supportFiles/new.o ./supportFiles/spi.o ./supportFiles/switches.o ./supportFiles/utils.o  ./src/laserTag/detector.o ./src/laserTag/isr.o ./src/laserTag/main.o ./src/laserTag/queue.o ./src/laserTag/transmitter.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: Consolidated_330_SW.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size Consolidated_330_SW.elf  |tee "Consolidated_330_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 135320	   3176	12005536	12144032	 b94da0	Consolidated_330_SW.elf
+Finished building: Consolidated_330_SW.elf.size
+ 
+16:06:11 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+Finished building: ../src/laserTag/queue.c
+ 
+Building target: Consolidated_330_SW.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../HW3_bsp/ps7_cortexa9_0/lib -o "Consolidated_330_SW.elf"  ./supportFiles/Adafruit_GFX.o ./supportFiles/Adafruit_STMPE610.o ./supportFiles/Adafruit_TFTLCD.o ./supportFiles/Print.o ./supportFiles/WString.o ./supportFiles/buttons.o ./supportFiles/circularBuffer.o ./supportFiles/display.o ./supportFiles/glcdfont.o ./supportFiles/globalTimer.o ./supportFiles/interrupts.o ./supportFiles/intervalTimer.o ./supportFiles/lcd.o ./supportFiles/leds.o ./supportFiles/mio.o ./supportFiles/new.o ./supportFiles/spi.o ./supportFiles/switches.o ./supportFiles/utils.o  ./src/laserTag/detector.o ./src/laserTag/isr.o ./src/laserTag/main.o ./src/laserTag/queue.o ./src/laserTag/transmitter.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: Consolidated_330_SW.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size Consolidated_330_SW.elf  |tee "Consolidated_330_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 135320	   3176	12005536	12144032	 b94da0	Consolidated_330_SW.elf
+Finished building: Consolidated_330_SW.elf.size
+ 
+16:09:09 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+../src/laserTag/queue.c: In function 'bool queueFull(queue_t*)':
+../src/laserTag/queue.c:43:1: error: expected unqualified-id before '}' token
+ }
+ ^
+../src/laserTag/queue.c:43:1: error: expected ';' before '}' token
+../src/laserTag/queue.c: In function 'bool queue_empty(queue_t*)':
+../src/laserTag/queue.c:48:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'queue_data_t queue_pop(queue_t*)':
+../src/laserTag/queue.c:58:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'queue_data_t queue_readElementAt(queue_t*, queue_index_t)':
+../src/laserTag/queue.c:70:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'queue_size_t queue_elementCount(queue_t*)':
+../src/laserTag/queue.c:75:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'int queue_runTest()':
+../src/laserTag/queue.c:85:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'bool queueFull(queue_t*)':
+../src/laserTag/queue.c:43:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/laserTag/queue.o] Error 1
+16:14:52 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+../src/laserTag/queue.c: In function 'bool queueFull(queue_t*)':
+../src/laserTag/queue.c:42:29: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if(q->indexIn = q->size - 2) { // -2 because it is the second to last index
+                             ^
+../src/laserTag/queue.c:45:42: error: 'TRUE' was not declared in this scope
+   return (q->indexIn - 1) == q->indexOut?TRUE:FALSE;
+                                          ^
+../src/laserTag/queue.c:45:47: error: 'FALSE' was not declared in this scope
+   return (q->indexIn - 1) == q->indexOut?TRUE:FALSE;
+                                               ^
+../src/laserTag/queue.c: In function 'bool queue_empty(queue_t*)':
+../src/laserTag/queue.c:51:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'queue_data_t queue_pop(queue_t*)':
+../src/laserTag/queue.c:61:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'queue_data_t queue_readElementAt(queue_t*, queue_index_t)':
+../src/laserTag/queue.c:73:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'queue_size_t queue_elementCount(queue_t*)':
+../src/laserTag/queue.c:78:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'int queue_runTest()':
+../src/laserTag/queue.c:88:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'bool queueFull(queue_t*)':
+../src/laserTag/queue.c:46:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/laserTag/queue.o] Error 1
+16:15:13 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+../src/laserTag/queue.c: In function 'bool queueFull(queue_t*)':
+../src/laserTag/queue.c:45:29: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if(q->indexIn = q->size - 2) { // -2 because it is the second to last index
+                             ^
+../src/laserTag/queue.c: In function 'bool queue_empty(queue_t*)':
+../src/laserTag/queue.c:54:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'queue_data_t queue_pop(queue_t*)':
+../src/laserTag/queue.c:64:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'queue_data_t queue_readElementAt(queue_t*, queue_index_t)':
+../src/laserTag/queue.c:76:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'queue_size_t queue_elementCount(queue_t*)':
+../src/laserTag/queue.c:81:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'int queue_runTest()':
+../src/laserTag/queue.c:91:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/laserTag/queue.c
+ 
+Building target: Consolidated_330_SW.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../HW3_bsp/ps7_cortexa9_0/lib -o "Consolidated_330_SW.elf"  ./supportFiles/Adafruit_GFX.o ./supportFiles/Adafruit_STMPE610.o ./supportFiles/Adafruit_TFTLCD.o ./supportFiles/Print.o ./supportFiles/WString.o ./supportFiles/buttons.o ./supportFiles/circularBuffer.o ./supportFiles/display.o ./supportFiles/glcdfont.o ./supportFiles/globalTimer.o ./supportFiles/interrupts.o ./supportFiles/intervalTimer.o ./supportFiles/lcd.o ./supportFiles/leds.o ./supportFiles/mio.o ./supportFiles/new.o ./supportFiles/spi.o ./supportFiles/switches.o ./supportFiles/utils.o  ./src/laserTag/detector.o ./src/laserTag/isr.o ./src/laserTag/main.o ./src/laserTag/queue.o ./src/laserTag/transmitter.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: Consolidated_330_SW.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size Consolidated_330_SW.elf  |tee "Consolidated_330_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 135384	   3176	12005536	12144096	 b94de0	Consolidated_330_SW.elf
+Finished building: Consolidated_330_SW.elf.size
+ 
+16:15:26 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+../src/laserTag/queue.c: In function 'bool queue_empty(queue_t*)':
+../src/laserTag/queue.c:54:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'queue_data_t queue_pop(queue_t*)':
+../src/laserTag/queue.c:64:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'queue_data_t queue_readElementAt(queue_t*, queue_index_t)':
+../src/laserTag/queue.c:76:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'queue_size_t queue_elementCount(queue_t*)':
+../src/laserTag/queue.c:81:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'int queue_runTest()':
+../src/laserTag/queue.c:91:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/laserTag/queue.c
+ 
+Building target: Consolidated_330_SW.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../HW3_bsp/ps7_cortexa9_0/lib -o "Consolidated_330_SW.elf"  ./supportFiles/Adafruit_GFX.o ./supportFiles/Adafruit_STMPE610.o ./supportFiles/Adafruit_TFTLCD.o ./supportFiles/Print.o ./supportFiles/WString.o ./supportFiles/buttons.o ./supportFiles/circularBuffer.o ./supportFiles/display.o ./supportFiles/glcdfont.o ./supportFiles/globalTimer.o ./supportFiles/interrupts.o ./supportFiles/intervalTimer.o ./supportFiles/lcd.o ./supportFiles/leds.o ./supportFiles/mio.o ./supportFiles/new.o ./supportFiles/spi.o ./supportFiles/switches.o ./supportFiles/utils.o  ./src/laserTag/detector.o ./src/laserTag/isr.o ./src/laserTag/main.o ./src/laserTag/queue.o ./src/laserTag/transmitter.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: Consolidated_330_SW.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size Consolidated_330_SW.elf  |tee "Consolidated_330_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 135384	   3176	12005536	12144096	 b94de0	Consolidated_330_SW.elf
+Finished building: Consolidated_330_SW.elf.size
+ 
+16:17:00 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+../src/laserTag/queue.c: In function 'queue_data_t queue_pop(queue_t*)':
+../src/laserTag/queue.c:64:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'queue_data_t queue_readElementAt(queue_t*, queue_index_t)':
+../src/laserTag/queue.c:76:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'queue_size_t queue_elementCount(queue_t*)':
+../src/laserTag/queue.c:81:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'int queue_runTest()':
+../src/laserTag/queue.c:91:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/laserTag/queue.c
+ 
+Building target: Consolidated_330_SW.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../HW3_bsp/ps7_cortexa9_0/lib -o "Consolidated_330_SW.elf"  ./supportFiles/Adafruit_GFX.o ./supportFiles/Adafruit_STMPE610.o ./supportFiles/Adafruit_TFTLCD.o ./supportFiles/Print.o ./supportFiles/WString.o ./supportFiles/buttons.o ./supportFiles/circularBuffer.o ./supportFiles/display.o ./supportFiles/glcdfont.o ./supportFiles/globalTimer.o ./supportFiles/interrupts.o ./supportFiles/intervalTimer.o ./supportFiles/lcd.o ./supportFiles/leds.o ./supportFiles/mio.o ./supportFiles/new.o ./supportFiles/spi.o ./supportFiles/switches.o ./supportFiles/utils.o  ./src/laserTag/detector.o ./src/laserTag/isr.o ./src/laserTag/main.o ./src/laserTag/queue.o ./src/laserTag/transmitter.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: Consolidated_330_SW.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size Consolidated_330_SW.elf  |tee "Consolidated_330_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 135384	   3176	12005536	12144096	 b94de0	Consolidated_330_SW.elf
+Finished building: Consolidated_330_SW.elf.size
+ 
+16:17:16 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+../src/laserTag/queue.c: In function 'bool queueFull(queue_t*)':
+../src/laserTag/queue.c:48:42: error: 'TRUE' was not declared in this scope
+   return (q->indexIn - 1) == q->indexOut?TRUE:FALSE; // Is it ahead by 1?
+                                          ^
+../src/laserTag/queue.c:48:47: error: 'FALSE' was not declared in this scope
+   return (q->indexIn - 1) == q->indexOut?TRUE:FALSE; // Is it ahead by 1?
+                                               ^
+../src/laserTag/queue.c: In function 'queue_data_t queue_pop(queue_t*)':
+../src/laserTag/queue.c:64:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'queue_data_t queue_readElementAt(queue_t*, queue_index_t)':
+../src/laserTag/queue.c:76:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'queue_size_t queue_elementCount(queue_t*)':
+../src/laserTag/queue.c:81:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'int queue_runTest()':
+../src/laserTag/queue.c:91:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'bool queueFull(queue_t*)':
+../src/laserTag/queue.c:49:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/laserTag/queue.o] Error 1
+16:17:27 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+../src/laserTag/queue.c: In function 'queue_data_t queue_pop(queue_t*)':
+../src/laserTag/queue.c:64:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'queue_data_t queue_readElementAt(queue_t*, queue_index_t)':
+../src/laserTag/queue.c:76:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'queue_size_t queue_elementCount(queue_t*)':
+../src/laserTag/queue.c:81:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'int queue_runTest()':
+../src/laserTag/queue.c:91:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/laserTag/queue.c
+ 
+Building target: Consolidated_330_SW.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../HW3_bsp/ps7_cortexa9_0/lib -o "Consolidated_330_SW.elf"  ./supportFiles/Adafruit_GFX.o ./supportFiles/Adafruit_STMPE610.o ./supportFiles/Adafruit_TFTLCD.o ./supportFiles/Print.o ./supportFiles/WString.o ./supportFiles/buttons.o ./supportFiles/circularBuffer.o ./supportFiles/display.o ./supportFiles/glcdfont.o ./supportFiles/globalTimer.o ./supportFiles/interrupts.o ./supportFiles/intervalTimer.o ./supportFiles/lcd.o ./supportFiles/leds.o ./supportFiles/mio.o ./supportFiles/new.o ./supportFiles/spi.o ./supportFiles/switches.o ./supportFiles/utils.o  ./src/laserTag/detector.o ./src/laserTag/isr.o ./src/laserTag/main.o ./src/laserTag/queue.o ./src/laserTag/transmitter.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: Consolidated_330_SW.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size Consolidated_330_SW.elf  |tee "Consolidated_330_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 135384	   3176	12005536	12144096	 b94de0	Consolidated_330_SW.elf
+Finished building: Consolidated_330_SW.elf.size
+ 
+16:17:57 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+../src/laserTag/queue.c: In function 'bool queueFull(queue_t*)':
+../src/laserTag/queue.c:46:1: error: expected ';' before '}' token
+ }
+ ^
+../src/laserTag/queue.c: In function 'queue_data_t queue_pop(queue_t*)':
+../src/laserTag/queue.c:61:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'queue_data_t queue_readElementAt(queue_t*, queue_index_t)':
+../src/laserTag/queue.c:73:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'queue_size_t queue_elementCount(queue_t*)':
+../src/laserTag/queue.c:78:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'int queue_runTest()':
+../src/laserTag/queue.c:88:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [src/laserTag/queue.o] Error 1
+16:17:59 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+../src/laserTag/queue.c: In function 'queue_data_t queue_pop(queue_t*)':
+../src/laserTag/queue.c:61:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'queue_data_t queue_readElementAt(queue_t*, queue_index_t)':
+../src/laserTag/queue.c:73:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'queue_size_t queue_elementCount(queue_t*)':
+../src/laserTag/queue.c:78:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'int queue_runTest()':
+../src/laserTag/queue.c:88:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/laserTag/queue.c
+ 
+Building target: Consolidated_330_SW.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../HW3_bsp/ps7_cortexa9_0/lib -o "Consolidated_330_SW.elf"  ./supportFiles/Adafruit_GFX.o ./supportFiles/Adafruit_STMPE610.o ./supportFiles/Adafruit_TFTLCD.o ./supportFiles/Print.o ./supportFiles/WString.o ./supportFiles/buttons.o ./supportFiles/circularBuffer.o ./supportFiles/display.o ./supportFiles/glcdfont.o ./supportFiles/globalTimer.o ./supportFiles/interrupts.o ./supportFiles/intervalTimer.o ./supportFiles/lcd.o ./supportFiles/leds.o ./supportFiles/mio.o ./supportFiles/new.o ./supportFiles/spi.o ./supportFiles/switches.o ./supportFiles/utils.o  ./src/laserTag/detector.o ./src/laserTag/isr.o ./src/laserTag/main.o ./src/laserTag/queue.o ./src/laserTag/transmitter.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: Consolidated_330_SW.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size Consolidated_330_SW.elf  |tee "Consolidated_330_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 135384	   3176	12005536	12144096	 b94de0	Consolidated_330_SW.elf
+Finished building: Consolidated_330_SW.elf.size
+ 
+16:18:25 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+../src/laserTag/queue.c: In function 'queue_data_t queue_readElementAt(queue_t*, queue_index_t)':
+../src/laserTag/queue.c:73:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'queue_size_t queue_elementCount(queue_t*)':
+../src/laserTag/queue.c:78:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'int queue_runTest()':
+../src/laserTag/queue.c:88:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/laserTag/queue.c
+ 
+Building target: Consolidated_330_SW.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../HW3_bsp/ps7_cortexa9_0/lib -o "Consolidated_330_SW.elf"  ./supportFiles/Adafruit_GFX.o ./supportFiles/Adafruit_STMPE610.o ./supportFiles/Adafruit_TFTLCD.o ./supportFiles/Print.o ./supportFiles/WString.o ./supportFiles/buttons.o ./supportFiles/circularBuffer.o ./supportFiles/display.o ./supportFiles/glcdfont.o ./supportFiles/globalTimer.o ./supportFiles/interrupts.o ./supportFiles/intervalTimer.o ./supportFiles/lcd.o ./supportFiles/leds.o ./supportFiles/mio.o ./supportFiles/new.o ./supportFiles/spi.o ./supportFiles/switches.o ./supportFiles/utils.o  ./src/laserTag/detector.o ./src/laserTag/isr.o ./src/laserTag/main.o ./src/laserTag/queue.o ./src/laserTag/transmitter.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: Consolidated_330_SW.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size Consolidated_330_SW.elf  |tee "Consolidated_330_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 135448	   3176	12005536	12144160	 b94e20	Consolidated_330_SW.elf
+Finished building: Consolidated_330_SW.elf.size
+ 
+16:20:50 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+../src/laserTag/queue.c: In function 'void queue_push(queue_t*, queue_data_t)':
+../src/laserTag/queue.c:56:1: error: expected primary-expression before '}' token
+ }
+ ^
+../src/laserTag/queue.c:56:1: error: expected ';' before '}' token
+../src/laserTag/queue.c: In function 'queue_data_t queue_readElementAt(queue_t*, queue_index_t)':
+../src/laserTag/queue.c:73:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'queue_size_t queue_elementCount(queue_t*)':
+../src/laserTag/queue.c:78:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'int queue_runTest()':
+../src/laserTag/queue.c:88:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [src/laserTag/queue.o] Error 1
+16:22:46 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+../src/laserTag/queue.c: In function 'queue_data_t queue_readElementAt(queue_t*, queue_index_t)':
+../src/laserTag/queue.c:77:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'queue_size_t queue_elementCount(queue_t*)':
+../src/laserTag/queue.c:82:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'int queue_runTest()':
+../src/laserTag/queue.c:92:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/laserTag/queue.c
+ 
+Building target: Consolidated_330_SW.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../HW3_bsp/ps7_cortexa9_0/lib -o "Consolidated_330_SW.elf"  ./supportFiles/Adafruit_GFX.o ./supportFiles/Adafruit_STMPE610.o ./supportFiles/Adafruit_TFTLCD.o ./supportFiles/Print.o ./supportFiles/WString.o ./supportFiles/buttons.o ./supportFiles/circularBuffer.o ./supportFiles/display.o ./supportFiles/glcdfont.o ./supportFiles/globalTimer.o ./supportFiles/interrupts.o ./supportFiles/intervalTimer.o ./supportFiles/lcd.o ./supportFiles/leds.o ./supportFiles/mio.o ./supportFiles/new.o ./supportFiles/spi.o ./supportFiles/switches.o ./supportFiles/utils.o  ./src/laserTag/detector.o ./src/laserTag/isr.o ./src/laserTag/main.o ./src/laserTag/queue.o ./src/laserTag/transmitter.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: Consolidated_330_SW.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size Consolidated_330_SW.elf  |tee "Consolidated_330_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 135560	   3176	12005536	12144272	 b94e90	Consolidated_330_SW.elf
+Finished building: Consolidated_330_SW.elf.size
+ 
+16:32:41 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+../src/laserTag/queue.c: In function 'void queue_advancePtr(queue_index_t, queue_t*)':
+../src/laserTag/queue.c:55:30: error: return-statement with a value, in function returning 'void' [-fpermissive]
+  return p == q->size - 1?0:p+1;
+                              ^
+../src/laserTag/queue.c: In function 'void queue_push(queue_t*, queue_data_t)':
+../src/laserTag/queue.c:65:14: error: void value not ignored as it ought to be
+   q->indexIn = queue_advancePtr(q->indexIn, q);
+              ^
+../src/laserTag/queue.c: In function 'queue_data_t queue_readElementAt(queue_t*, queue_index_t)':
+../src/laserTag/queue.c:84:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'queue_size_t queue_elementCount(queue_t*)':
+../src/laserTag/queue.c:89:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'int queue_runTest()':
+../src/laserTag/queue.c:99:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [src/laserTag/queue.o] Error 1
+16:33:24 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+../src/laserTag/queue.c: In function 'void queue_advancePtr(queue_index_t, queue_size_t*)':
+../src/laserTag/queue.c:55:21: error: ISO C++ forbids comparison between pointer and integer [-fpermissive]
+  return p == size - 1?0:p+1;
+                     ^
+../src/laserTag/queue.c:55:27: error: return-statement with a value, in function returning 'void' [-fpermissive]
+  return p == size - 1?0:p+1;
+                           ^
+../src/laserTag/queue.c: In function 'void queue_push(queue_t*, queue_data_t)':
+../src/laserTag/queue.c:65:46: error: cannot convert 'queue_t*' to 'queue_size_t* {aka long unsigned int*}' for argument '2' to 'void queue_advancePtr(queue_index_t, queue_size_t*)'
+   q->indexIn = queue_advancePtr(q->indexIn, q);
+                                              ^
+../src/laserTag/queue.c: In function 'queue_data_t queue_readElementAt(queue_t*, queue_index_t)':
+../src/laserTag/queue.c:84:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'queue_size_t queue_elementCount(queue_t*)':
+../src/laserTag/queue.c:89:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'int queue_runTest()':
+../src/laserTag/queue.c:99:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [src/laserTag/queue.o] Error 1
+16:33:33 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+../src/laserTag/queue.c: In function 'void queue_advancePtr(queue_index_t, queue_size_t*)':
+../src/laserTag/queue.c:55:21: error: ISO C++ forbids comparison between pointer and integer [-fpermissive]
+  return p == size - 1?0:p+1;
+                     ^
+../src/laserTag/queue.c:55:27: error: return-statement with a value, in function returning 'void' [-fpermissive]
+  return p == size - 1?0:p+1;
+                           ^
+../src/laserTag/queue.c: In function 'void queue_push(queue_t*, queue_data_t)':
+../src/laserTag/queue.c:65:52: error: invalid conversion from 'queue_size_t {aka long unsigned int}' to 'queue_size_t* {aka long unsigned int*}' [-fpermissive]
+   q->indexIn = queue_advancePtr(q->indexIn, q->size);
+                                                    ^
+../src/laserTag/queue.c:54:6: error:   initializing argument 2 of 'void queue_advancePtr(queue_index_t, queue_size_t*)' [-fpermissive]
+ void queue_advancePtr(queue_index_t p, queue_size_t* size) {
+      ^
+../src/laserTag/queue.c:65:14: error: void value not ignored as it ought to be
+   q->indexIn = queue_advancePtr(q->indexIn, q->size);
+              ^
+../src/laserTag/queue.c: In function 'queue_data_t queue_readElementAt(queue_t*, queue_index_t)':
+../src/laserTag/queue.c:84:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'queue_size_t queue_elementCount(queue_t*)':
+../src/laserTag/queue.c:89:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'int queue_runTest()':
+../src/laserTag/queue.c:99:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [src/laserTag/queue.o] Error 1
+16:33:44 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+../src/laserTag/queue.c: In function 'void queue_advancePtr(queue_index_t, queue_size_t)':
+../src/laserTag/queue.c:55:27: error: return-statement with a value, in function returning 'void' [-fpermissive]
+  return p == size - 1?0:p+1;
+                           ^
+../src/laserTag/queue.c: In function 'void queue_push(queue_t*, queue_data_t)':
+../src/laserTag/queue.c:65:14: error: void value not ignored as it ought to be
+   q->indexIn = queue_advancePtr(q->indexIn, q->size);
+              ^
+../src/laserTag/queue.c: In function 'queue_data_t queue_readElementAt(queue_t*, queue_index_t)':
+../src/laserTag/queue.c:84:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'queue_size_t queue_elementCount(queue_t*)':
+../src/laserTag/queue.c:89:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'int queue_runTest()':
+../src/laserTag/queue.c:99:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [src/laserTag/queue.o] Error 1
+16:34:04 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+../src/laserTag/queue.c: In function 'queue_data_t queue_readElementAt(queue_t*, queue_index_t)':
+../src/laserTag/queue.c:84:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'queue_size_t queue_elementCount(queue_t*)':
+../src/laserTag/queue.c:89:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'int queue_runTest()':
+../src/laserTag/queue.c:99:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/laserTag/queue.c
+ 
+Building target: Consolidated_330_SW.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../HW3_bsp/ps7_cortexa9_0/lib -o "Consolidated_330_SW.elf"  ./supportFiles/Adafruit_GFX.o ./supportFiles/Adafruit_STMPE610.o ./supportFiles/Adafruit_TFTLCD.o ./supportFiles/Print.o ./supportFiles/WString.o ./supportFiles/buttons.o ./supportFiles/circularBuffer.o ./supportFiles/display.o ./supportFiles/glcdfont.o ./supportFiles/globalTimer.o ./supportFiles/interrupts.o ./supportFiles/intervalTimer.o ./supportFiles/lcd.o ./supportFiles/leds.o ./supportFiles/mio.o ./supportFiles/new.o ./supportFiles/spi.o ./supportFiles/switches.o ./supportFiles/utils.o  ./src/laserTag/detector.o ./src/laserTag/isr.o ./src/laserTag/main.o ./src/laserTag/queue.o ./src/laserTag/transmitter.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: Consolidated_330_SW.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size Consolidated_330_SW.elf  |tee "Consolidated_330_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 135624	   3176	12005536	12144336	 b94ed0	Consolidated_330_SW.elf
+Finished building: Consolidated_330_SW.elf.size
+ 
+16:35:51 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+../src/laserTag/queue.c: In function 'queue_data_t queue_pop(queue_t*)':
+../src/laserTag/queue.c:71:2: error: 'temp' was not declared in this scope
+  temp = q->data[q->indexOut];
+  ^
+../src/laserTag/queue.c: In function 'queue_data_t queue_readElementAt(queue_t*, queue_index_t)':
+../src/laserTag/queue.c:86:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'queue_size_t queue_elementCount(queue_t*)':
+../src/laserTag/queue.c:91:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'int queue_runTest()':
+../src/laserTag/queue.c:101:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'queue_data_t queue_pop(queue_t*)':
+../src/laserTag/queue.c:74:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/laserTag/queue.o] Error 1
+16:36:07 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+../src/laserTag/queue.c: In function 'queue_data_t queue_readElementAt(queue_t*, queue_index_t)':
+../src/laserTag/queue.c:86:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'queue_size_t queue_elementCount(queue_t*)':
+../src/laserTag/queue.c:91:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'int queue_runTest()':
+../src/laserTag/queue.c:101:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/laserTag/queue.c
+ 
+Building target: Consolidated_330_SW.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../HW3_bsp/ps7_cortexa9_0/lib -o "Consolidated_330_SW.elf"  ./supportFiles/Adafruit_GFX.o ./supportFiles/Adafruit_STMPE610.o ./supportFiles/Adafruit_TFTLCD.o ./supportFiles/Print.o ./supportFiles/WString.o ./supportFiles/buttons.o ./supportFiles/circularBuffer.o ./supportFiles/display.o ./supportFiles/glcdfont.o ./supportFiles/globalTimer.o ./supportFiles/interrupts.o ./supportFiles/intervalTimer.o ./supportFiles/lcd.o ./supportFiles/leds.o ./supportFiles/mio.o ./supportFiles/new.o ./supportFiles/spi.o ./supportFiles/switches.o ./supportFiles/utils.o  ./src/laserTag/detector.o ./src/laserTag/isr.o ./src/laserTag/main.o ./src/laserTag/queue.o ./src/laserTag/transmitter.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: Consolidated_330_SW.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size Consolidated_330_SW.elf  |tee "Consolidated_330_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 135624	   3176	12005536	12144336	 b94ed0	Consolidated_330_SW.elf
+Finished building: Consolidated_330_SW.elf.size
+ 
+16:37:32 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+../src/laserTag/queue.c: In function 'queue_data_t queue_pop(queue_t*)':
+../src/laserTag/queue.c:74:16: warning: unused variable 'temp' [-Wunused-variable]
+   queue_data_t temp = q->data[q->indexOut];
+                ^
+../src/laserTag/queue.c:77:9: error: 'temp' was not declared in this scope
+  return temp;
+         ^
+../src/laserTag/queue.c: In function 'queue_data_t queue_readElementAt(queue_t*, queue_index_t)':
+../src/laserTag/queue.c:90:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'queue_size_t queue_elementCount(queue_t*)':
+../src/laserTag/queue.c:95:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'int queue_runTest()':
+../src/laserTag/queue.c:105:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'queue_data_t queue_pop(queue_t*)':
+../src/laserTag/queue.c:78:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/laserTag/queue.o] Error 1
+16:38:25 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+../src/laserTag/queue.c: In function 'queue_data_t queue_readElementAt(queue_t*, queue_index_t)':
+../src/laserTag/queue.c:90:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'queue_size_t queue_elementCount(queue_t*)':
+../src/laserTag/queue.c:95:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'int queue_runTest()':
+../src/laserTag/queue.c:105:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/laserTag/queue.c
+ 
+Building target: Consolidated_330_SW.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../HW3_bsp/ps7_cortexa9_0/lib -o "Consolidated_330_SW.elf"  ./supportFiles/Adafruit_GFX.o ./supportFiles/Adafruit_STMPE610.o ./supportFiles/Adafruit_TFTLCD.o ./supportFiles/Print.o ./supportFiles/WString.o ./supportFiles/buttons.o ./supportFiles/circularBuffer.o ./supportFiles/display.o ./supportFiles/glcdfont.o ./supportFiles/globalTimer.o ./supportFiles/interrupts.o ./supportFiles/intervalTimer.o ./supportFiles/lcd.o ./supportFiles/leds.o ./supportFiles/mio.o ./supportFiles/new.o ./supportFiles/spi.o ./supportFiles/switches.o ./supportFiles/utils.o  ./src/laserTag/detector.o ./src/laserTag/isr.o ./src/laserTag/main.o ./src/laserTag/queue.o ./src/laserTag/transmitter.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: Consolidated_330_SW.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size Consolidated_330_SW.elf  |tee "Consolidated_330_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 135696	   3176	12005536	12144408	 b94f18	Consolidated_330_SW.elf
+Finished building: Consolidated_330_SW.elf.size
+ 
+16:39:54 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+../src/laserTag/queue.c: In function 'queue_data_t queue_readElementAt(queue_t*, queue_index_t)':
+../src/laserTag/queue.c:92:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'queue_size_t queue_elementCount(queue_t*)':
+../src/laserTag/queue.c:97:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'int queue_runTest()':
+../src/laserTag/queue.c:107:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/laserTag/queue.c
+ 
+Building target: Consolidated_330_SW.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../HW3_bsp/ps7_cortexa9_0/lib -o "Consolidated_330_SW.elf"  ./supportFiles/Adafruit_GFX.o ./supportFiles/Adafruit_STMPE610.o ./supportFiles/Adafruit_TFTLCD.o ./supportFiles/Print.o ./supportFiles/WString.o ./supportFiles/buttons.o ./supportFiles/circularBuffer.o ./supportFiles/display.o ./supportFiles/glcdfont.o ./supportFiles/globalTimer.o ./supportFiles/interrupts.o ./supportFiles/intervalTimer.o ./supportFiles/lcd.o ./supportFiles/leds.o ./supportFiles/mio.o ./supportFiles/new.o ./supportFiles/spi.o ./supportFiles/switches.o ./supportFiles/utils.o  ./src/laserTag/detector.o ./src/laserTag/isr.o ./src/laserTag/main.o ./src/laserTag/queue.o ./src/laserTag/transmitter.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: Consolidated_330_SW.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size Consolidated_330_SW.elf  |tee "Consolidated_330_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 135696	   3176	12005536	12144408	 b94f18	Consolidated_330_SW.elf
+Finished building: Consolidated_330_SW.elf.size
+ 
+16:41:10 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+../src/laserTag/queue.c: In function 'queue_data_t queue_readElementAt(queue_t*, queue_index_t)':
+../src/laserTag/queue.c:93:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'queue_size_t queue_elementCount(queue_t*)':
+../src/laserTag/queue.c:98:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'int queue_runTest()':
+../src/laserTag/queue.c:108:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/laserTag/queue.c
+ 
+Building target: Consolidated_330_SW.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../HW3_bsp/ps7_cortexa9_0/lib -o "Consolidated_330_SW.elf"  ./supportFiles/Adafruit_GFX.o ./supportFiles/Adafruit_STMPE610.o ./supportFiles/Adafruit_TFTLCD.o ./supportFiles/Print.o ./supportFiles/WString.o ./supportFiles/buttons.o ./supportFiles/circularBuffer.o ./supportFiles/display.o ./supportFiles/glcdfont.o ./supportFiles/globalTimer.o ./supportFiles/interrupts.o ./supportFiles/intervalTimer.o ./supportFiles/lcd.o ./supportFiles/leds.o ./supportFiles/mio.o ./supportFiles/new.o ./supportFiles/spi.o ./supportFiles/switches.o ./supportFiles/utils.o  ./src/laserTag/detector.o ./src/laserTag/isr.o ./src/laserTag/main.o ./src/laserTag/queue.o ./src/laserTag/transmitter.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: Consolidated_330_SW.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size Consolidated_330_SW.elf  |tee "Consolidated_330_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 135896	   3176	12005528	12144600	 b94fd8	Consolidated_330_SW.elf
+Finished building: Consolidated_330_SW.elf.size
+ 
+16:45:01 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+../src/laserTag/queue.c: In function 'queue_size_t queue_elementCount(queue_t*)':
+../src/laserTag/queue.c:98:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/laserTag/queue.c: In function 'int queue_runTest()':
+../src/laserTag/queue.c:108:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/laserTag/queue.c
+ 
+Building target: Consolidated_330_SW.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../HW3_bsp/ps7_cortexa9_0/lib -o "Consolidated_330_SW.elf"  ./supportFiles/Adafruit_GFX.o ./supportFiles/Adafruit_STMPE610.o ./supportFiles/Adafruit_TFTLCD.o ./supportFiles/Print.o ./supportFiles/WString.o ./supportFiles/buttons.o ./supportFiles/circularBuffer.o ./supportFiles/display.o ./supportFiles/glcdfont.o ./supportFiles/globalTimer.o ./supportFiles/interrupts.o ./supportFiles/intervalTimer.o ./supportFiles/lcd.o ./supportFiles/leds.o ./supportFiles/mio.o ./supportFiles/new.o ./supportFiles/spi.o ./supportFiles/switches.o ./supportFiles/utils.o  ./src/laserTag/detector.o ./src/laserTag/isr.o ./src/laserTag/main.o ./src/laserTag/queue.o ./src/laserTag/transmitter.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: Consolidated_330_SW.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size Consolidated_330_SW.elf  |tee "Consolidated_330_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 135896	   3176	12005528	12144600	 b94fd8	Consolidated_330_SW.elf
+Finished building: Consolidated_330_SW.elf.size
+ 
+16:45:17 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+../src/laserTag/queue.c: In function 'int queue_runTest()':
+../src/laserTag/queue.c:108:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/laserTag/queue.c
+ 
+Building target: Consolidated_330_SW.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../HW3_bsp/ps7_cortexa9_0/lib -o "Consolidated_330_SW.elf"  ./supportFiles/Adafruit_GFX.o ./supportFiles/Adafruit_STMPE610.o ./supportFiles/Adafruit_TFTLCD.o ./supportFiles/Print.o ./supportFiles/WString.o ./supportFiles/buttons.o ./supportFiles/circularBuffer.o ./supportFiles/display.o ./supportFiles/glcdfont.o ./supportFiles/globalTimer.o ./supportFiles/interrupts.o ./supportFiles/intervalTimer.o ./supportFiles/lcd.o ./supportFiles/leds.o ./supportFiles/mio.o ./supportFiles/new.o ./supportFiles/spi.o ./supportFiles/switches.o ./supportFiles/utils.o  ./src/laserTag/detector.o ./src/laserTag/isr.o ./src/laserTag/main.o ./src/laserTag/queue.o ./src/laserTag/transmitter.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: Consolidated_330_SW.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size Consolidated_330_SW.elf  |tee "Consolidated_330_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 135896	   3176	12005528	12144600	 b94fd8	Consolidated_330_SW.elf
+Finished building: Consolidated_330_SW.elf.size
+ 
+16:46:43 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+../src/laserTag/queue.c: In function 'int queue_runTest()':
+../src/laserTag/queue.c:110:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/laserTag/queue.c
+ 
+Building target: Consolidated_330_SW.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../HW3_bsp/ps7_cortexa9_0/lib -o "Consolidated_330_SW.elf"  ./supportFiles/Adafruit_GFX.o ./supportFiles/Adafruit_STMPE610.o ./supportFiles/Adafruit_TFTLCD.o ./supportFiles/Print.o ./supportFiles/WString.o ./supportFiles/buttons.o ./supportFiles/circularBuffer.o ./supportFiles/display.o ./supportFiles/glcdfont.o ./supportFiles/globalTimer.o ./supportFiles/interrupts.o ./supportFiles/intervalTimer.o ./supportFiles/lcd.o ./supportFiles/leds.o ./supportFiles/mio.o ./supportFiles/new.o ./supportFiles/spi.o ./supportFiles/switches.o ./supportFiles/utils.o  ./src/laserTag/detector.o ./src/laserTag/isr.o ./src/laserTag/main.o ./src/laserTag/queue.o ./src/laserTag/transmitter.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: Consolidated_330_SW.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size Consolidated_330_SW.elf  |tee "Consolidated_330_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 135992	   3176	12005528	12144696	 b95038	Consolidated_330_SW.elf
+Finished building: Consolidated_330_SW.elf.size
+ 
+16:47:15 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+../src/laserTag/queue.c: In function 'int queue_runTest()':
+../src/laserTag/queue.c:110:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/laserTag/queue.c
+ 
+Building target: Consolidated_330_SW.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../HW3_bsp/ps7_cortexa9_0/lib -o "Consolidated_330_SW.elf"  ./supportFiles/Adafruit_GFX.o ./supportFiles/Adafruit_STMPE610.o ./supportFiles/Adafruit_TFTLCD.o ./supportFiles/Print.o ./supportFiles/WString.o ./supportFiles/buttons.o ./supportFiles/circularBuffer.o ./supportFiles/display.o ./supportFiles/glcdfont.o ./supportFiles/globalTimer.o ./supportFiles/interrupts.o ./supportFiles/intervalTimer.o ./supportFiles/lcd.o ./supportFiles/leds.o ./supportFiles/mio.o ./supportFiles/new.o ./supportFiles/spi.o ./supportFiles/switches.o ./supportFiles/utils.o  ./src/laserTag/detector.o ./src/laserTag/isr.o ./src/laserTag/main.o ./src/laserTag/queue.o ./src/laserTag/transmitter.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: Consolidated_330_SW.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size Consolidated_330_SW.elf  |tee "Consolidated_330_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 135992	   3176	12005528	12144696	 b95038	Consolidated_330_SW.elf
+Finished building: Consolidated_330_SW.elf.size
+ 
+16:50:41 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+../src/laserTag/queue.c: In function 'int queue_runTest()':
+../src/laserTag/queue.c:121:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/laserTag/queue.c
+ 
+Building target: Consolidated_330_SW.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../HW3_bsp/ps7_cortexa9_0/lib -o "Consolidated_330_SW.elf"  ./supportFiles/Adafruit_GFX.o ./supportFiles/Adafruit_STMPE610.o ./supportFiles/Adafruit_TFTLCD.o ./supportFiles/Print.o ./supportFiles/WString.o ./supportFiles/buttons.o ./supportFiles/circularBuffer.o ./supportFiles/display.o ./supportFiles/glcdfont.o ./supportFiles/globalTimer.o ./supportFiles/interrupts.o ./supportFiles/intervalTimer.o ./supportFiles/lcd.o ./supportFiles/leds.o ./supportFiles/mio.o ./supportFiles/new.o ./supportFiles/spi.o ./supportFiles/switches.o ./supportFiles/utils.o  ./src/laserTag/detector.o ./src/laserTag/isr.o ./src/laserTag/main.o ./src/laserTag/queue.o ./src/laserTag/transmitter.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: Consolidated_330_SW.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size Consolidated_330_SW.elf  |tee "Consolidated_330_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 136256	   3176	12005536	12144968	 b95148	Consolidated_330_SW.elf
+Finished building: Consolidated_330_SW.elf.size
+ 
+16:50:52 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+Finished building: ../src/laserTag/queue.c
+ 
+Building target: Consolidated_330_SW.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../HW3_bsp/ps7_cortexa9_0/lib -o "Consolidated_330_SW.elf"  ./supportFiles/Adafruit_GFX.o ./supportFiles/Adafruit_STMPE610.o ./supportFiles/Adafruit_TFTLCD.o ./supportFiles/Print.o ./supportFiles/WString.o ./supportFiles/buttons.o ./supportFiles/circularBuffer.o ./supportFiles/display.o ./supportFiles/glcdfont.o ./supportFiles/globalTimer.o ./supportFiles/interrupts.o ./supportFiles/intervalTimer.o ./supportFiles/lcd.o ./supportFiles/leds.o ./supportFiles/mio.o ./supportFiles/new.o ./supportFiles/spi.o ./supportFiles/switches.o ./supportFiles/utils.o  ./src/laserTag/detector.o ./src/laserTag/isr.o ./src/laserTag/main.o ./src/laserTag/queue.o ./src/laserTag/transmitter.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: Consolidated_330_SW.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size Consolidated_330_SW.elf  |tee "Consolidated_330_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 136256	   3176	12005536	12144968	 b95148	Consolidated_330_SW.elf
+Finished building: Consolidated_330_SW.elf.size
+ 
+16:51:30 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/main.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/main.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/main.d" -MT"src/laserTag/main.d" -o "src/laserTag/main.o" "../src/laserTag/main.c"
+Finished building: ../src/laserTag/main.c
+ 
+Building target: Consolidated_330_SW.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../HW3_bsp/ps7_cortexa9_0/lib -o "Consolidated_330_SW.elf"  ./supportFiles/Adafruit_GFX.o ./supportFiles/Adafruit_STMPE610.o ./supportFiles/Adafruit_TFTLCD.o ./supportFiles/Print.o ./supportFiles/WString.o ./supportFiles/buttons.o ./supportFiles/circularBuffer.o ./supportFiles/display.o ./supportFiles/glcdfont.o ./supportFiles/globalTimer.o ./supportFiles/interrupts.o ./supportFiles/intervalTimer.o ./supportFiles/lcd.o ./supportFiles/leds.o ./supportFiles/mio.o ./supportFiles/new.o ./supportFiles/spi.o ./supportFiles/switches.o ./supportFiles/utils.o  ./src/laserTag/detector.o ./src/laserTag/isr.o ./src/laserTag/main.o ./src/laserTag/queue.o ./src/laserTag/transmitter.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: Consolidated_330_SW.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size Consolidated_330_SW.elf  |tee "Consolidated_330_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 136260	   3176	12005536	12144972	 b9514c	Consolidated_330_SW.elf
+Finished building: Consolidated_330_SW.elf.size
+ 
+16:51:34 **** Incremental Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+make: Nothing to be done for `all'.
+16:52:06 **** Incremental Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+make: Nothing to be done for `all'.
+16:53:10 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/main.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/main.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/main.d" -MT"src/laserTag/main.d" -o "src/laserTag/main.o" "../src/laserTag/main.c"
+../src/laserTag/main.c: In function 'int main()':
+../src/laserTag/main.c:50:6: warning: unused variable 'countInterruptsViaInterruptsIsrFlag' [-Wunused-variable]
+  int countInterruptsViaInterruptsIsrFlag = 0;
+      ^
+Finished building: ../src/laserTag/main.c
+ 
+Building target: Consolidated_330_SW.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../HW3_bsp/ps7_cortexa9_0/lib -o "Consolidated_330_SW.elf"  ./supportFiles/Adafruit_GFX.o ./supportFiles/Adafruit_STMPE610.o ./supportFiles/Adafruit_TFTLCD.o ./supportFiles/Print.o ./supportFiles/WString.o ./supportFiles/buttons.o ./supportFiles/circularBuffer.o ./supportFiles/display.o ./supportFiles/glcdfont.o ./supportFiles/globalTimer.o ./supportFiles/interrupts.o ./supportFiles/intervalTimer.o ./supportFiles/lcd.o ./supportFiles/leds.o ./supportFiles/mio.o ./supportFiles/new.o ./supportFiles/spi.o ./supportFiles/switches.o ./supportFiles/utils.o  ./src/laserTag/detector.o ./src/laserTag/isr.o ./src/laserTag/main.o ./src/laserTag/queue.o ./src/laserTag/transmitter.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: Consolidated_330_SW.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size Consolidated_330_SW.elf  |tee "Consolidated_330_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 135248	   3176	12005536	12143960	 b94d58	Consolidated_330_SW.elf
+Finished building: Consolidated_330_SW.elf.size
+ 
+16:53:13 **** Incremental Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+make: Nothing to be done for `all'.
+16:53:53 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/main.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/main.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/main.d" -MT"src/laserTag/main.d" -o "src/laserTag/main.o" "../src/laserTag/main.c"
+Finished building: ../src/laserTag/main.c
+ 
+Building target: Consolidated_330_SW.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../HW3_bsp/ps7_cortexa9_0/lib -o "Consolidated_330_SW.elf"  ./supportFiles/Adafruit_GFX.o ./supportFiles/Adafruit_STMPE610.o ./supportFiles/Adafruit_TFTLCD.o ./supportFiles/Print.o ./supportFiles/WString.o ./supportFiles/buttons.o ./supportFiles/circularBuffer.o ./supportFiles/display.o ./supportFiles/glcdfont.o ./supportFiles/globalTimer.o ./supportFiles/interrupts.o ./supportFiles/intervalTimer.o ./supportFiles/lcd.o ./supportFiles/leds.o ./supportFiles/mio.o ./supportFiles/new.o ./supportFiles/spi.o ./supportFiles/switches.o ./supportFiles/utils.o  ./src/laserTag/detector.o ./src/laserTag/isr.o ./src/laserTag/main.o ./src/laserTag/queue.o ./src/laserTag/transmitter.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: Consolidated_330_SW.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size Consolidated_330_SW.elf  |tee "Consolidated_330_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 134952	   3176	12005536	12143664	 b94c30	Consolidated_330_SW.elf
+Finished building: Consolidated_330_SW.elf.size
+ 
+16:53:59 **** Incremental Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+make: Nothing to be done for `all'.
+16:54:45 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+Finished building: ../src/laserTag/queue.c
+ 
+Building target: Consolidated_330_SW.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../HW3_bsp/ps7_cortexa9_0/lib -o "Consolidated_330_SW.elf"  ./supportFiles/Adafruit_GFX.o ./supportFiles/Adafruit_STMPE610.o ./supportFiles/Adafruit_TFTLCD.o ./supportFiles/Print.o ./supportFiles/WString.o ./supportFiles/buttons.o ./supportFiles/circularBuffer.o ./supportFiles/display.o ./supportFiles/glcdfont.o ./supportFiles/globalTimer.o ./supportFiles/interrupts.o ./supportFiles/intervalTimer.o ./supportFiles/lcd.o ./supportFiles/leds.o ./supportFiles/mio.o ./supportFiles/new.o ./supportFiles/spi.o ./supportFiles/switches.o ./supportFiles/utils.o  ./src/laserTag/detector.o ./src/laserTag/isr.o ./src/laserTag/main.o ./src/laserTag/queue.o ./src/laserTag/transmitter.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: Consolidated_330_SW.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size Consolidated_330_SW.elf  |tee "Consolidated_330_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 135016	   3176	12005536	12143728	 b94c70	Consolidated_330_SW.elf
+Finished building: Consolidated_330_SW.elf.size
+ 
+16:54:49 **** Incremental Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+make: Nothing to be done for `all'.
+16:56:06 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+Finished building: ../src/laserTag/queue.c
+ 
+Building target: Consolidated_330_SW.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../HW3_bsp/ps7_cortexa9_0/lib -o "Consolidated_330_SW.elf"  ./supportFiles/Adafruit_GFX.o ./supportFiles/Adafruit_STMPE610.o ./supportFiles/Adafruit_TFTLCD.o ./supportFiles/Print.o ./supportFiles/WString.o ./supportFiles/buttons.o ./supportFiles/circularBuffer.o ./supportFiles/display.o ./supportFiles/glcdfont.o ./supportFiles/globalTimer.o ./supportFiles/interrupts.o ./supportFiles/intervalTimer.o ./supportFiles/lcd.o ./supportFiles/leds.o ./supportFiles/mio.o ./supportFiles/new.o ./supportFiles/spi.o ./supportFiles/switches.o ./supportFiles/utils.o  ./src/laserTag/detector.o ./src/laserTag/isr.o ./src/laserTag/main.o ./src/laserTag/queue.o ./src/laserTag/transmitter.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: Consolidated_330_SW.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size Consolidated_330_SW.elf  |tee "Consolidated_330_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 135080	   3176	12005536	12143792	 b94cb0	Consolidated_330_SW.elf
+Finished building: Consolidated_330_SW.elf.size
+ 
+16:56:08 **** Incremental Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+make: Nothing to be done for `all'.
+16:58:44 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+Finished building: ../src/laserTag/queue.c
+ 
+Building target: Consolidated_330_SW.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../HW3_bsp/ps7_cortexa9_0/lib -o "Consolidated_330_SW.elf"  ./supportFiles/Adafruit_GFX.o ./supportFiles/Adafruit_STMPE610.o ./supportFiles/Adafruit_TFTLCD.o ./supportFiles/Print.o ./supportFiles/WString.o ./supportFiles/buttons.o ./supportFiles/circularBuffer.o ./supportFiles/display.o ./supportFiles/glcdfont.o ./supportFiles/globalTimer.o ./supportFiles/interrupts.o ./supportFiles/intervalTimer.o ./supportFiles/lcd.o ./supportFiles/leds.o ./supportFiles/mio.o ./supportFiles/new.o ./supportFiles/spi.o ./supportFiles/switches.o ./supportFiles/utils.o  ./src/laserTag/detector.o ./src/laserTag/isr.o ./src/laserTag/main.o ./src/laserTag/queue.o ./src/laserTag/transmitter.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: Consolidated_330_SW.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size Consolidated_330_SW.elf  |tee "Consolidated_330_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 135080	   3176	12005536	12143792	 b94cb0	Consolidated_330_SW.elf
+Finished building: Consolidated_330_SW.elf.size
+ 
+16:58:49 **** Incremental Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+make: Nothing to be done for `all'.
+17:01:26 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+Finished building: ../src/laserTag/queue.c
+ 
+Building target: Consolidated_330_SW.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../HW3_bsp/ps7_cortexa9_0/lib -o "Consolidated_330_SW.elf"  ./supportFiles/Adafruit_GFX.o ./supportFiles/Adafruit_STMPE610.o ./supportFiles/Adafruit_TFTLCD.o ./supportFiles/Print.o ./supportFiles/WString.o ./supportFiles/buttons.o ./supportFiles/circularBuffer.o ./supportFiles/display.o ./supportFiles/glcdfont.o ./supportFiles/globalTimer.o ./supportFiles/interrupts.o ./supportFiles/intervalTimer.o ./supportFiles/lcd.o ./supportFiles/leds.o ./supportFiles/mio.o ./supportFiles/new.o ./supportFiles/spi.o ./supportFiles/switches.o ./supportFiles/utils.o  ./src/laserTag/detector.o ./src/laserTag/isr.o ./src/laserTag/main.o ./src/laserTag/queue.o ./src/laserTag/transmitter.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: Consolidated_330_SW.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size Consolidated_330_SW.elf  |tee "Consolidated_330_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 135080	   3176	12005536	12143792	 b94cb0	Consolidated_330_SW.elf
+Finished building: Consolidated_330_SW.elf.size
+ 
+17:01:28 **** Incremental Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+make: Nothing to be done for `all'.
+17:02:25 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+Finished building: ../src/laserTag/queue.c
+ 
+Building target: Consolidated_330_SW.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../HW3_bsp/ps7_cortexa9_0/lib -o "Consolidated_330_SW.elf"  ./supportFiles/Adafruit_GFX.o ./supportFiles/Adafruit_STMPE610.o ./supportFiles/Adafruit_TFTLCD.o ./supportFiles/Print.o ./supportFiles/WString.o ./supportFiles/buttons.o ./supportFiles/circularBuffer.o ./supportFiles/display.o ./supportFiles/glcdfont.o ./supportFiles/globalTimer.o ./supportFiles/interrupts.o ./supportFiles/intervalTimer.o ./supportFiles/lcd.o ./supportFiles/leds.o ./supportFiles/mio.o ./supportFiles/new.o ./supportFiles/spi.o ./supportFiles/switches.o ./supportFiles/utils.o  ./src/laserTag/detector.o ./src/laserTag/isr.o ./src/laserTag/main.o ./src/laserTag/queue.o ./src/laserTag/transmitter.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: Consolidated_330_SW.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size Consolidated_330_SW.elf  |tee "Consolidated_330_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 135080	   3176	12005536	12143792	 b94cb0	Consolidated_330_SW.elf
+Finished building: Consolidated_330_SW.elf.size
+ 
+17:02:28 **** Incremental Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+make: Nothing to be done for `all'.
+17:03:22 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+../src/laserTag/queue.c: In function 'int queue_runTest()':
+../src/laserTag/queue.c:124:27: error: cannot convert 'queue_t' to 'queue_t*' for argument '1' to 'void queue_overwritePush(queue_t*, queue_data_t)'
+  queue_overwritePush(q, 13);
+                           ^
+make: *** [src/laserTag/queue.o] Error 1
+17:04:40 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+../src/laserTag/queue.c: In function 'int queue_runTest()':
+../src/laserTag/queue.c:126:40: warning: format '%d' expects argument of type 'int', but argument 2 has type 'queue_data_t {aka double}' [-Wformat=]
+  printf("popped: %d\n\r", queue_pop(qp));
+                                        ^
+../src/laserTag/queue.c:126:40: warning: format '%d' expects argument of type 'int', but argument 2 has type 'queue_data_t {aka double}' [-Wformat=]
+Finished building: ../src/laserTag/queue.c
+ 
+Building target: Consolidated_330_SW.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../HW3_bsp/ps7_cortexa9_0/lib -o "Consolidated_330_SW.elf"  ./supportFiles/Adafruit_GFX.o ./supportFiles/Adafruit_STMPE610.o ./supportFiles/Adafruit_TFTLCD.o ./supportFiles/Print.o ./supportFiles/WString.o ./supportFiles/buttons.o ./supportFiles/circularBuffer.o ./supportFiles/display.o ./supportFiles/glcdfont.o ./supportFiles/globalTimer.o ./supportFiles/interrupts.o ./supportFiles/intervalTimer.o ./supportFiles/lcd.o ./supportFiles/leds.o ./supportFiles/mio.o ./supportFiles/new.o ./supportFiles/spi.o ./supportFiles/switches.o ./supportFiles/utils.o  ./src/laserTag/detector.o ./src/laserTag/isr.o ./src/laserTag/main.o ./src/laserTag/queue.o ./src/laserTag/transmitter.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: Consolidated_330_SW.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size Consolidated_330_SW.elf  |tee "Consolidated_330_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 135224	   3176	12005536	12143936	 b94d40	Consolidated_330_SW.elf
+Finished building: Consolidated_330_SW.elf.size
+ 
+17:04:52 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+Finished building: ../src/laserTag/queue.c
+ 
+Building target: Consolidated_330_SW.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../HW3_bsp/ps7_cortexa9_0/lib -o "Consolidated_330_SW.elf"  ./supportFiles/Adafruit_GFX.o ./supportFiles/Adafruit_STMPE610.o ./supportFiles/Adafruit_TFTLCD.o ./supportFiles/Print.o ./supportFiles/WString.o ./supportFiles/buttons.o ./supportFiles/circularBuffer.o ./supportFiles/display.o ./supportFiles/glcdfont.o ./supportFiles/globalTimer.o ./supportFiles/interrupts.o ./supportFiles/intervalTimer.o ./supportFiles/lcd.o ./supportFiles/leds.o ./supportFiles/mio.o ./supportFiles/new.o ./supportFiles/spi.o ./supportFiles/switches.o ./supportFiles/utils.o  ./src/laserTag/detector.o ./src/laserTag/isr.o ./src/laserTag/main.o ./src/laserTag/queue.o ./src/laserTag/transmitter.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: Consolidated_330_SW.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size Consolidated_330_SW.elf  |tee "Consolidated_330_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 135224	   3176	12005536	12143936	 b94d40	Consolidated_330_SW.elf
+Finished building: Consolidated_330_SW.elf.size
+ 
+17:04:56 **** Incremental Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+make: Nothing to be done for `all'.
+17:05:40 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+Finished building: ../src/laserTag/queue.c
+ 
+Building target: Consolidated_330_SW.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../HW3_bsp/ps7_cortexa9_0/lib -o "Consolidated_330_SW.elf"  ./supportFiles/Adafruit_GFX.o ./supportFiles/Adafruit_STMPE610.o ./supportFiles/Adafruit_TFTLCD.o ./supportFiles/Print.o ./supportFiles/WString.o ./supportFiles/buttons.o ./supportFiles/circularBuffer.o ./supportFiles/display.o ./supportFiles/glcdfont.o ./supportFiles/globalTimer.o ./supportFiles/interrupts.o ./supportFiles/intervalTimer.o ./supportFiles/lcd.o ./supportFiles/leds.o ./supportFiles/mio.o ./supportFiles/new.o ./supportFiles/spi.o ./supportFiles/switches.o ./supportFiles/utils.o  ./src/laserTag/detector.o ./src/laserTag/isr.o ./src/laserTag/main.o ./src/laserTag/queue.o ./src/laserTag/transmitter.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: Consolidated_330_SW.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size Consolidated_330_SW.elf  |tee "Consolidated_330_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 135288	   3176	12005536	12144000	 b94d80	Consolidated_330_SW.elf
+Finished building: Consolidated_330_SW.elf.size
+ 
+17:05:41 **** Incremental Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+make: Nothing to be done for `all'.
+18:37:51 **** Incremental Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+make: Nothing to be done for `all'.
+18:38:04 **** Incremental Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+make: Nothing to be done for `all'.
+18:39:53 **** Incremental Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+make: Nothing to be done for `all'.
+18:40:59 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+Finished building: ../src/laserTag/queue.c
+ 
+Building target: Consolidated_330_SW.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../HW3_bsp/ps7_cortexa9_0/lib -o "Consolidated_330_SW.elf"  ./supportFiles/Adafruit_GFX.o ./supportFiles/Adafruit_STMPE610.o ./supportFiles/Adafruit_TFTLCD.o ./supportFiles/Print.o ./supportFiles/WString.o ./supportFiles/buttons.o ./supportFiles/circularBuffer.o ./supportFiles/display.o ./supportFiles/glcdfont.o ./supportFiles/globalTimer.o ./supportFiles/interrupts.o ./supportFiles/intervalTimer.o ./supportFiles/lcd.o ./supportFiles/leds.o ./supportFiles/mio.o ./supportFiles/new.o ./supportFiles/spi.o ./supportFiles/switches.o ./supportFiles/utils.o  ./src/laserTag/detector.o ./src/laserTag/isr.o ./src/laserTag/main.o ./src/laserTag/queue.o ./src/laserTag/transmitter.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: Consolidated_330_SW.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size Consolidated_330_SW.elf  |tee "Consolidated_330_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 135416	   3176	12005536	12144128	 b94e00	Consolidated_330_SW.elf
+Finished building: Consolidated_330_SW.elf.size
+ 
+18:41:03 **** Incremental Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+make: Nothing to be done for `all'.
+18:41:43 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+Finished building: ../src/laserTag/queue.c
+ 
+Building target: Consolidated_330_SW.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../HW3_bsp/ps7_cortexa9_0/lib -o "Consolidated_330_SW.elf"  ./supportFiles/Adafruit_GFX.o ./supportFiles/Adafruit_STMPE610.o ./supportFiles/Adafruit_TFTLCD.o ./supportFiles/Print.o ./supportFiles/WString.o ./supportFiles/buttons.o ./supportFiles/circularBuffer.o ./supportFiles/display.o ./supportFiles/glcdfont.o ./supportFiles/globalTimer.o ./supportFiles/interrupts.o ./supportFiles/intervalTimer.o ./supportFiles/lcd.o ./supportFiles/leds.o ./supportFiles/mio.o ./supportFiles/new.o ./supportFiles/spi.o ./supportFiles/switches.o ./supportFiles/utils.o  ./src/laserTag/detector.o ./src/laserTag/isr.o ./src/laserTag/main.o ./src/laserTag/queue.o ./src/laserTag/transmitter.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: Consolidated_330_SW.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size Consolidated_330_SW.elf  |tee "Consolidated_330_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 135288	   3176	12005536	12144000	 b94d80	Consolidated_330_SW.elf
+Finished building: Consolidated_330_SW.elf.size
+ 
+18:41:48 **** Incremental Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+make: Nothing to be done for `all'.
+18:43:44 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+Finished building: ../src/laserTag/queue.c
+ 
+Building target: Consolidated_330_SW.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../HW3_bsp/ps7_cortexa9_0/lib -o "Consolidated_330_SW.elf"  ./supportFiles/Adafruit_GFX.o ./supportFiles/Adafruit_STMPE610.o ./supportFiles/Adafruit_TFTLCD.o ./supportFiles/Print.o ./supportFiles/WString.o ./supportFiles/buttons.o ./supportFiles/circularBuffer.o ./supportFiles/display.o ./supportFiles/glcdfont.o ./supportFiles/globalTimer.o ./supportFiles/interrupts.o ./supportFiles/intervalTimer.o ./supportFiles/lcd.o ./supportFiles/leds.o ./supportFiles/mio.o ./supportFiles/new.o ./supportFiles/spi.o ./supportFiles/switches.o ./supportFiles/utils.o  ./src/laserTag/detector.o ./src/laserTag/isr.o ./src/laserTag/main.o ./src/laserTag/queue.o ./src/laserTag/transmitter.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: Consolidated_330_SW.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size Consolidated_330_SW.elf  |tee "Consolidated_330_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 135416	   3176	12005536	12144128	 b94e00	Consolidated_330_SW.elf
+Finished building: Consolidated_330_SW.elf.size
+ 
+18:43:51 **** Incremental Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+make: Nothing to be done for `all'.
+18:45:28 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+Finished building: ../src/laserTag/queue.c
+ 
+Building target: Consolidated_330_SW.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../HW3_bsp/ps7_cortexa9_0/lib -o "Consolidated_330_SW.elf"  ./supportFiles/Adafruit_GFX.o ./supportFiles/Adafruit_STMPE610.o ./supportFiles/Adafruit_TFTLCD.o ./supportFiles/Print.o ./supportFiles/WString.o ./supportFiles/buttons.o ./supportFiles/circularBuffer.o ./supportFiles/display.o ./supportFiles/glcdfont.o ./supportFiles/globalTimer.o ./supportFiles/interrupts.o ./supportFiles/intervalTimer.o ./supportFiles/lcd.o ./supportFiles/leds.o ./supportFiles/mio.o ./supportFiles/new.o ./supportFiles/spi.o ./supportFiles/switches.o ./supportFiles/utils.o  ./src/laserTag/detector.o ./src/laserTag/isr.o ./src/laserTag/main.o ./src/laserTag/queue.o ./src/laserTag/transmitter.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: Consolidated_330_SW.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size Consolidated_330_SW.elf  |tee "Consolidated_330_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 135288	   3176	12005536	12144000	 b94d80	Consolidated_330_SW.elf
+Finished building: Consolidated_330_SW.elf.size
+ 
+18:45:32 **** Incremental Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+make: Nothing to be done for `all'.
+18:49:29 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+Finished building: ../src/laserTag/queue.c
+ 
+Building target: Consolidated_330_SW.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../HW3_bsp/ps7_cortexa9_0/lib -o "Consolidated_330_SW.elf"  ./supportFiles/Adafruit_GFX.o ./supportFiles/Adafruit_STMPE610.o ./supportFiles/Adafruit_TFTLCD.o ./supportFiles/Print.o ./supportFiles/WString.o ./supportFiles/buttons.o ./supportFiles/circularBuffer.o ./supportFiles/display.o ./supportFiles/glcdfont.o ./supportFiles/globalTimer.o ./supportFiles/interrupts.o ./supportFiles/intervalTimer.o ./supportFiles/lcd.o ./supportFiles/leds.o ./supportFiles/mio.o ./supportFiles/new.o ./supportFiles/spi.o ./supportFiles/switches.o ./supportFiles/utils.o  ./src/laserTag/detector.o ./src/laserTag/isr.o ./src/laserTag/main.o ./src/laserTag/queue.o ./src/laserTag/transmitter.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: Consolidated_330_SW.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size Consolidated_330_SW.elf  |tee "Consolidated_330_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 135992	   3176	12005536	12144704	 b95040	Consolidated_330_SW.elf
+Finished building: Consolidated_330_SW.elf.size
+ 
+18:49:33 **** Incremental Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+make: Nothing to be done for `all'.
+18:50:09 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+Finished building: ../src/laserTag/queue.c
+ 
+Building target: Consolidated_330_SW.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../HW3_bsp/ps7_cortexa9_0/lib -o "Consolidated_330_SW.elf"  ./supportFiles/Adafruit_GFX.o ./supportFiles/Adafruit_STMPE610.o ./supportFiles/Adafruit_TFTLCD.o ./supportFiles/Print.o ./supportFiles/WString.o ./supportFiles/buttons.o ./supportFiles/circularBuffer.o ./supportFiles/display.o ./supportFiles/glcdfont.o ./supportFiles/globalTimer.o ./supportFiles/interrupts.o ./supportFiles/intervalTimer.o ./supportFiles/lcd.o ./supportFiles/leds.o ./supportFiles/mio.o ./supportFiles/new.o ./supportFiles/spi.o ./supportFiles/switches.o ./supportFiles/utils.o  ./src/laserTag/detector.o ./src/laserTag/isr.o ./src/laserTag/main.o ./src/laserTag/queue.o ./src/laserTag/transmitter.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: Consolidated_330_SW.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size Consolidated_330_SW.elf  |tee "Consolidated_330_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 136256	   3176	12005536	12144968	 b95148	Consolidated_330_SW.elf
+Finished building: Consolidated_330_SW.elf.size
+ 
+18:50:11 **** Incremental Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+make: Nothing to be done for `all'.
+18:50:35 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+Building file: ../src/laserTag/queue.c
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
+Finished building: ../src/laserTag/queue.c
+ 
+Building target: Consolidated_330_SW.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../HW3_bsp/ps7_cortexa9_0/lib -o "Consolidated_330_SW.elf"  ./supportFiles/Adafruit_GFX.o ./supportFiles/Adafruit_STMPE610.o ./supportFiles/Adafruit_TFTLCD.o ./supportFiles/Print.o ./supportFiles/WString.o ./supportFiles/buttons.o ./supportFiles/circularBuffer.o ./supportFiles/display.o ./supportFiles/glcdfont.o ./supportFiles/globalTimer.o ./supportFiles/interrupts.o ./supportFiles/intervalTimer.o ./supportFiles/lcd.o ./supportFiles/leds.o ./supportFiles/mio.o ./supportFiles/new.o ./supportFiles/spi.o ./supportFiles/switches.o ./supportFiles/utils.o  ./src/laserTag/detector.o ./src/laserTag/isr.o ./src/laserTag/main.o ./src/laserTag/queue.o ./src/laserTag/transmitter.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: Consolidated_330_SW.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size Consolidated_330_SW.elf  |tee "Consolidated_330_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 136248	   3176	12005536	12144960	 b95140	Consolidated_330_SW.elf
+Finished building: Consolidated_330_SW.elf.size
+ 
+18:50:39 **** Incremental Build of configuration Debug for project Consolidated_330_SW ****
+make all 
+make: Nothing to be done for `all'.

@@ -7,18 +7,21 @@ C_SRCS += \
 ../src/laserTag/detector.c \
 ../src/laserTag/isr.c \
 ../src/laserTag/main.c \
+../src/laserTag/queue.c \
 ../src/laserTag/transmitter.c 
 
 OBJS += \
 ./src/laserTag/detector.o \
 ./src/laserTag/isr.o \
 ./src/laserTag/main.o \
+./src/laserTag/queue.o \
 ./src/laserTag/transmitter.o 
 
 C_DEPS += \
 ./src/laserTag/detector.d \
 ./src/laserTag/isr.d \
 ./src/laserTag/main.d \
+./src/laserTag/queue.d \
 ./src/laserTag/transmitter.d 
 
 
