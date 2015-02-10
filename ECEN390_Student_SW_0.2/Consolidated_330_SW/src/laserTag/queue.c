@@ -82,7 +82,8 @@ queue_data_t queue_pop(queue_t* q) {
 
 // Pushes a new element into the queue, making room by removing the oldest element.
 void queue_overwritePush(queue_t* q, queue_data_t value) {
-	queue_pop(q);
+	if(queueFull(q))
+		queue_pop(q);
 	queue_push(q, value);
 }
 
@@ -106,52 +107,105 @@ void queue_print(queue_t* q) {
 	printf("\n\r");
 }
 
-// Performs a comprehensive test of all queue functions.
-int queue_runTest() {
+#define SMALL_QUEUE_SIZE 10
+#define SMALL_QUEUE_COUNT 10
+static queue_t smallQueue[SMALL_QUEUE_COUNT];
+static queue_t largeQueue;
+
+// smallQueue[SMALL_QUEUE_COUNT-1] contains newest value, smallQueue[0] contains oldest value.
+// Thus smallQueue[0](0) contains oldest value. smallQueue[SMALL_QUEUE_COUNT-1](SMALL_QUEUE_SIZE-1) contains newest value.
+// Presumes all queue come initialized full of something (probably zeros).
+static double popAndPushFromChainOfSmallQueues(double input) {
+	// Grab the oldest value from the oldest small queue before it is "pushed" off.
+	double willBePoppedValue = queue_readElementAt(&(smallQueue[0]), 0);
+	// Sequentially pop from the next newest queue and push into next oldest queue.
+	for (int i=0; i<SMALL_QUEUE_COUNT-1; i++) {
+		queue_overwritePush(&(smallQueue[i]), queue_pop(&(smallQueue[i+1])));
+	}
+	queue_overwritePush(&(smallQueue[SMALL_QUEUE_COUNT-1]), input);
+	return willBePoppedValue;
+}
+
+static bool compareChainOfSmallQueuesWithLargeQueue(uint16_t iterationCount) {
+	bool success = true;
+	static uint16_t oldIterationCount;
+	static bool firstPass = true;
+	// Start comparing the oldest element in the chain of small queues, and the large queue
+	// and move towards the newest values.
+	for (uint16_t smallQIdx=0; smallQIdx<SMALL_QUEUE_COUNT; smallQIdx++) {
+		//queue_print(&(smallQueue[smallQIdx])); // Added by me
+		for (uint16_t smallQEltIdx=0; smallQEltIdx<SMALL_QUEUE_SIZE; smallQEltIdx++) {
+			double smallQElt = queue_readElementAt(&(smallQueue[smallQIdx]), smallQEltIdx);
+			double largeQElt = queue_readElementAt(&largeQueue, (smallQIdx*SMALL_QUEUE_SIZE) + smallQEltIdx);
+			if (smallQElt != largeQElt) {
+				if (firstPass || (iterationCount != oldIterationCount)) {
+					printf("Iteration:%d\n\r", iterationCount);
+					oldIterationCount = iterationCount;
+					firstPass = false;
+				}
+				printf("largeQ(%d):%lf", (smallQIdx*SMALL_QUEUE_SIZE) + smallQEltIdx, largeQElt);
+				printf(" != ");
+				printf("smallQ[%d](%d): %lf\n\r", smallQIdx, smallQEltIdx, smallQElt);
+				success = false;
+			}
+		}
+	}
+	//getchar();	// Added by me
+	return success;
+}
+
+#define TEST_ITERATION_COUNT 105
+#define FILLER 5
+bool queue_runTest() {
+	bool success = true;  // Be optimistic.
+	// Let's make this a real torture test by testing queues against themselves.
+	// Test the queue against an array to make sure there is agreement between the two.
+	double testData[SMALL_QUEUE_SIZE + FILLER];
 	queue_t q;
-	queue_t* qp = &q;
-	queue_init(qp,5);
-	queue_print(qp);
-	queue_push(qp,4);
-	queue_print(qp);
-	queue_push(qp,6);
-	queue_print(qp);
-	queue_pop(qp);
-	queue_print(qp);
-	queue_push(qp,1);
-	queue_print(qp);
-	queue_push(qp,2);
-	queue_print(qp);
-	queue_push(qp,8);
-	queue_print(qp);
-	queue_push(qp,9);
-	queue_print(qp);
-	queue_push(qp,0);
-	queue_print(qp);
-	queue_overwritePush(qp,13);
-	queue_print(qp);
-	queue_overwritePush(qp,43);
-	queue_print(qp);
-	queue_overwritePush(qp,0);
-	queue_print(qp);
-	queue_pop(qp);
-	queue_print(qp);
-	queue_pop(qp);
-	queue_print(qp);
-	queue_pop(qp);
-	queue_print(qp);
-	queue_pop(qp);
-	queue_print(qp);
-	queue_pop(qp);
-	queue_print(qp);
-	queue_pop(qp);
-	queue_print(qp);
-	queue_pop(qp);
-	queue_print(qp);
-	queue_push(qp,8);
-	queue_print(qp);
-	queue_push(qp,8);
-	queue_print(qp);
-	printf("popped: %le\n\r", queue_pop(qp));
-	return true;
+	queue_init(&q, SMALL_QUEUE_SIZE);
+	// Generate test values and place the values in both the array and the queue.
+	for (int i=0; i<SMALL_QUEUE_SIZE + FILLER; i++) {
+		double value = (double)rand()/(double)RAND_MAX;
+		queue_overwritePush(&q, value);
+		testData[i] = value;
+	}
+	//queue_print(&q); // Added by me
+	// Everything is initialized, compare the contents of the queue against the array.
+	for (int i=0; i<SMALL_QUEUE_SIZE; i++) {
+		double qValue = queue_readElementAt(&q, i);
+		if (qValue != testData[i+FILLER]) {
+			printf("testData[%d]:%lf != queue_readElementAt(&q, %d):%lf\n\r", i, testData[i+FILLER], i+FILLER, qValue);
+			success = false;
+		}
+	}
+	if (!success) {
+		printf("Test 1 failed. Array contents not equal to queue contents.\n\r");
+	} else {
+		printf("Test 1 passed. Array contents match queue contents.\n\r");
+	}
+	success = true;  // Remain optimistic.
+	// Test 2: test a chain of 5 queues against a single large queue that is the same size as the cumulative 5 queues.
+	for (int i=0; i<SMALL_QUEUE_COUNT; i++)
+		queue_init(&(smallQueue[i]), SMALL_QUEUE_SIZE);
+	for (int i=0; i<SMALL_QUEUE_COUNT; i++) {
+		for (int j=0; j<SMALL_QUEUE_SIZE; j++)
+			queue_overwritePush(&(smallQueue[i]), 0.0);
+	}
+	queue_init(&largeQueue, SMALL_QUEUE_SIZE * SMALL_QUEUE_COUNT);
+	for (int i=0; i<SMALL_QUEUE_SIZE*SMALL_QUEUE_COUNT; i++)
+		queue_overwritePush(&largeQueue, 0.0);
+	for (int i=0; i<TEST_ITERATION_COUNT; i++) {
+		double newInput = (double)rand()/(double)RAND_MAX;
+		popAndPushFromChainOfSmallQueues(newInput);
+		queue_overwritePush(&largeQueue, newInput);
+		if (!compareChainOfSmallQueuesWithLargeQueue(i)) {  // i is passed to print useful debugging messages.
+			success = false;
+		}
+	}
+
+	if (success)
+		printf("Test 2 passed. Small chain of queues behaves identical to single large queue.\n\r");
+	else
+		printf("Test 2 failed. The content of the chained small queues does not match the contents of the large queue.\n\r");
+	return success;
 }

@@ -57,7 +57,7 @@ void gueue_garbageCollect(queue_t* q);
 void queue_print(queue_t* q);
 
 // Performs a comprehensive test of all queue functions.
-int queue_runTest();
+bool queue_runTest();
 
 
 #endif /* QUEUE_H_ */
