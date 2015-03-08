@@ -13,7 +13,7 @@
 
 #define FILTER_IIR_FILTER_COUNT 10      // You need this many IIR filters.
 #define FILTER_FIR_DECIMATION_FACTOR 1	// Filter needs this many new inputs to compute a new output.
-#define FILTER_INPUT_PULSE_WIDTH 2000	// This is the width of the pulse you are looking for, in terms of decimated sample count.
+#define FILTER_INPUT_PULSE_WIDTH 200	// This is the width of the pulse you are looking for, in terms of decimated sample count.
 
 // Filtering routines for the laser-tag project.
 // Filtering is performed by a two-stage filter, as described below.

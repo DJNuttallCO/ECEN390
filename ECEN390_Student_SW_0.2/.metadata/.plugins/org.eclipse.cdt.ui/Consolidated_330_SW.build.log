@@ -1,21 +1,6 @@
-08:43:33 **** Auto Build of configuration Debug for project Consolidated_330_SW ****
+04:16:31 **** Incremental Build of configuration Debug for project Consolidated_330_SW ****
 make all 
-Building file: ../src/laserTag/queue.c
-Invoking: ARM g++ compiler
-arm-xilinx-eabi-g++ -Wall -O3 -finline-functions -g3 -I"C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW" -c -fmessage-length=0 -MT"src/laserTag/queue.o" -I../../HW3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/laserTag/queue.d" -MT"src/laserTag/queue.d" -o "src/laserTag/queue.o" "../src/laserTag/queue.c"
-Finished building: ../src/laserTag/queue.c
- 
-Building target: Consolidated_330_SW.elf
-Invoking: ARM g++ linker
-arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../HW3_bsp/ps7_cortexa9_0/lib -o "Consolidated_330_SW.elf"  ./supportFiles/Adafruit_GFX.o ./supportFiles/Adafruit_STMPE610.o ./supportFiles/Adafruit_TFTLCD.o ./supportFiles/Print.o ./supportFiles/WString.o ./supportFiles/buttons.o ./supportFiles/circularBuffer.o ./supportFiles/display.o ./supportFiles/glcdfont.o ./supportFiles/globalTimer.o ./supportFiles/interrupts.o ./supportFiles/intervalTimer.o ./supportFiles/lcd.o ./supportFiles/leds.o ./supportFiles/mio.o ./supportFiles/new.o ./supportFiles/spi.o ./supportFiles/switches.o ./supportFiles/utils.o  ./src/laserTag/detector.o ./src/laserTag/isr.o ./src/laserTag/main.o ./src/laserTag/queue.o ./src/laserTag/transmitter.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
-Finished building target: Consolidated_330_SW.elf
- 
-Invoking: ARM Print Size
-arm-xilinx-eabi-size Consolidated_330_SW.elf  |tee "Consolidated_330_SW.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 137372	   3176	12005760	12146308	 b95684	Consolidated_330_SW.elf
-Finished building: Consolidated_330_SW.elf.size
- 
+make: Nothing to be done for `all'.
 
-08:43:34 Build Finished (took 1s.327ms)
+04:16:31 Build Finished (took 379ms)
 

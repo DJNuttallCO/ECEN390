@@ -8,7 +8,7 @@ src/laserTag/main.o src/laserTag/main.d: ../src/laserTag/main.c \
  C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW/supportFiles/intervalTimer.h \
  C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW/supportFiles/buttons.h \
  C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW/supportFiles/switches.h \
- ../src/laserTag/isr.h ../src/laserTag/queue.h
+ ../src/laserTag/isr.h ../src/laserTag/queue.h ../src/laserTag/filter.h
 
 C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW/supportFiles/leds.h:
 
@@ -31,3 +31,5 @@ C:\Workspace390TA\ECEN390_Student_SW_0.2\Consolidated_330_SW/supportFiles/switch
 ../src/laserTag/isr.h:
 
 ../src/laserTag/queue.h:
+
+../src/laserTag/filter.h:

@@ -270,3 +270,138 @@ Could not detect MDM peripheral on hardware. Please check:
 08:43:18 INFO  : init_user is completed.
 08:43:18 INFO  : ps7_init is completed.
 08:43:19 INFO  : Processor reset is completed for ps7_cortexa9_0
+03:27:24 ERROR : Unexpected error while fetching XMD's response: 
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:196)
+	at java.net.SocketInputStream.read(SocketInputStream.java:122)
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:283)
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:325)
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:177)
+	at java.io.InputStreamReader.read(InputStreamReader.java:184)
+	at java.io.BufferedReader.fill(BufferedReader.java:154)
+	at java.io.BufferedReader.read(BufferedReader.java:175)
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess$CommandResultsReader.run(XMDJSONProcess.java:332)
+	at java.lang.Thread.run(Thread.java:724)
+03:27:24 ERROR : Zero sized response read from XMD. This indicates a communication error or a programming error.
+15:44:46 INFO  : FPGA configured successfully with bitstream "C:/Workspace390TA/ECEN390_Student_SW_0.2/HWTest3_hw_platform/system.bit"
+15:44:58 INFO  : init_user is completed.
+15:44:58 INFO  : ps7_init is completed.
+15:44:58 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:44:58 ERROR : No such port: COM30
+15:45:10 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:56:24 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:59:15 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:00:20 INFO  : Processor reset is completed for ps7_cortexa9_0
+10:33:47 INFO  : FPGA configured successfully with bitstream "C:/Workspace390TA/ECEN390_Student_SW_0.2/HWTest3_hw_platform/system.bit"
+10:33:55 INFO  : init_user is completed.
+10:33:56 INFO  : ps7_init is completed.
+10:33:56 INFO  : Processor reset is completed for ps7_cortexa9_0
+10:33:56 ERROR : No such port: COM36
+10:34:09 INFO  : Processor reset is completed for ps7_cortexa9_0
+10:45:30 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:23:50 INFO  : FPGA configured successfully with bitstream "C:/Workspace390TA/ECEN390_Student_SW_0.2/HWTest3_hw_platform/system.bit"
+16:24:03 INFO  : init_user is completed.
+16:24:03 INFO  : ps7_init is completed.
+16:24:03 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:24:03 ERROR : No such port: COM38
+16:24:18 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:37:28 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+19:29:05 INFO  : FPGA configured successfully with bitstream "C:/Workspace390TA/ECEN390_Student_SW_0.2/HWTest3_hw_platform/system.bit"
+19:29:25 INFO  : init_user is completed.
+19:29:25 INFO  : ps7_init is completed.
+19:29:26 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:31:25 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:32:00 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:34:24 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:35:32 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:36:36 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:38:08 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:41:58 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:46:36 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:46:46 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:18:56 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:20:13 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:20:52 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:21:58 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:22:26 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:23:48 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:26:26 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:26:32 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:26:33 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Failed to download ELF file
+
+Unknown Error Occured
+    : C:/Workspace390TA/ECEN390_Student_SW_0.2/Consolidated_330_SW/Debug/Consolidated_330_SW.elf
+
+	at com.xilinx.sdk.targetmanager.internal.TM.downloadELF(TM.java:752)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(AppRunner.java:129)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:534)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:252)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1251)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+20:27:10 INFO  : FPGA configured successfully with bitstream "C:/Workspace390TA/ECEN390_Student_SW_0.2/HWTest3_hw_platform/system.bit"
+20:27:22 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+20:27:55 INFO  : FPGA configured successfully with bitstream "C:/Workspace390TA/ECEN390_Student_SW_0.2/HWTest3_hw_platform/system.bit"
+20:28:21 INFO  : init_user is completed.
+20:28:21 INFO  : ps7_init is completed.
+20:28:21 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:30:40 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:32:11 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:34:19 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:35:07 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:50:27 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:52:30 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:03:24 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:03:59 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:08:06 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:08:18 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:09:06 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:09:54 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:10:14 INFO  : Processor reset is completed for ps7_cortexa9_0
+23:25:00 ERROR : Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Unknown Error Occured
+    Cable is not connected to the host
+
+23:25:00 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Connection to Board Failed
+
+
+    Unknown Error Occured
+    Cable is not connected to the host
+
+	at com.xilinx.sdk.targetmanager.internal.TM.isFPGAConfigured(TM.java:386)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.isFpgaConfigured(XilinxAppLaunchConfigurationDelegate.java:297)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:245)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1251)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+23:25:11 INFO  : FPGA configured successfully with bitstream "C:/Workspace390TA/ECEN390_Student_SW_0.2/HWTest3_hw_platform/system.bit"
+23:25:19 INFO  : init_user is completed.
+23:25:19 INFO  : ps7_init is completed.
+23:25:19 INFO  : Processor reset is completed for ps7_cortexa9_0
+01:31:44 INFO  : FPGA configured successfully with bitstream "C:/Workspace390TA/ECEN390_Student_SW_0.2/HWTest3_hw_platform/system.bit"
+01:31:52 INFO  : init_user is completed.
+01:31:52 INFO  : ps7_init is completed.
+01:31:52 INFO  : Processor reset is completed for ps7_cortexa9_0
+01:33:59 INFO  : Processor reset is completed for ps7_cortexa9_0
+01:35:14 INFO  : Processor reset is completed for ps7_cortexa9_0
+03:31:51 INFO  : Processor reset is completed for ps7_cortexa9_0
+03:33:47 INFO  : Processor reset is completed for ps7_cortexa9_0
+03:35:22 INFO  : Processor reset is completed for ps7_cortexa9_0
+03:36:36 INFO  : Processor reset is completed for ps7_cortexa9_0
+03:38:31 INFO  : Processor reset is completed for ps7_cortexa9_0
+03:42:14 INFO  : Processor reset is completed for ps7_cortexa9_0
+04:06:38 INFO  : Processor reset is completed for ps7_cortexa9_0
+04:13:28 INFO  : Processor reset is completed for ps7_cortexa9_0
+04:14:33 INFO  : Processor reset is completed for ps7_cortexa9_0
+04:15:15 INFO  : Processor reset is completed for ps7_cortexa9_0
+04:16:39 INFO  : Processor reset is completed for ps7_cortexa9_0

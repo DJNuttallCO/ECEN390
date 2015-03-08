@@ -5,6 +5,7 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../src/laserTag/detector.c \
+../src/laserTag/filter.c \
 ../src/laserTag/isr.c \
 ../src/laserTag/main.c \
 ../src/laserTag/queue.c \
@@ -12,6 +13,7 @@ C_SRCS += \
 
 OBJS += \
 ./src/laserTag/detector.o \
+./src/laserTag/filter.o \
 ./src/laserTag/isr.o \
 ./src/laserTag/main.o \
 ./src/laserTag/queue.o \
@@ -19,6 +21,7 @@ OBJS += \
 
 C_DEPS += \
 ./src/laserTag/detector.d \
+./src/laserTag/filter.d \
 ./src/laserTag/isr.d \
 ./src/laserTag/main.d \
 ./src/laserTag/queue.d \
