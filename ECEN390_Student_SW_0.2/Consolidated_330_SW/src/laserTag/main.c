@@ -20,6 +20,8 @@
 #include "trigger.h"
 #include "hitLedTimer.h"
 #include "lockoutTimer.h"
+#include "queue.h"
+#include "filter.h"
 
 #define TOTAL_SECONDS 3000
 
@@ -74,6 +76,9 @@ int main() {
 			utils_msDelay(500);
 			lockoutTimer_runTest();
 			utils_msDelay(500);
+			queue_runTest();
+			filter_runTest();
+			utils_msDelay(1000);
 		}
 	}
 	interrupts_disableArmInts();	// Disable ARM interrupts.

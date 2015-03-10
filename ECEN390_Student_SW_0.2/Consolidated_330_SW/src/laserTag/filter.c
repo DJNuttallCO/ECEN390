@@ -17,10 +17,15 @@
 #define Y_QUEUE_SIZE IIR_B_COEFFICIENT_COUNT
 #define Z_QUEUE_SIZE IIR_A_COEFFICIENT_COUNT
 #define TEST_DATA_COUNT 200
+#define POWER_OUTPUT_QUEUE_SIZE 20000
 
 static queue_t xQueue;
 static queue_t yQueue;
 static queue_t zQueue[FILTER_IIR_FILTER_COUNT];
+static queue_t powerOutput[FILTER_IIR_FILTER_COUNT];
+
+static double currentPowerValue[FILTER_IIR_FILTER_COUNT] = {};
+
 const double firBcoeff[FIR_COEF_COUNT] = {3.66000121597220e-05,-9.37983887116858e-20,-0.000853962386806215,-0.00403760479059139,-0.00991457334688855,-0.0132599560706162,5.44337364799067e-18,0.0482283541041642,0.139662648737947,0.257391560533714,0.359393702205797,0.400000000000000,0.359393702205797,0.257391560533714,0.139662648737947,0.0482283541041642,5.44337364799067e-18,-0.0132599560706162,-0.00991457334688855,-0.00403760479059139,-0.000853962386806215,-9.37983887116858e-20,3.66000121597220e-05};
 const double iirAcoeff[FILTER_IIR_FILTER_COUNT][IIR_A_COEFFICIENT_COUNT] = {
 		{-7.50908233436483,27.3536234378542,-62.7047362383248,99.6056348149310,-114.201323557917,95.6364834552749,-57.8068381560701,24.2120744276596,-6.38177025817259,0.816001991091691},
@@ -92,6 +97,14 @@ void initZQueues() {
 	}
 }
 
+void initPowerQueues() {
+	for (int i=0; i<FILTER_IIR_FILTER_COUNT; i++) {
+		queue_init(&(powerOutput[i]), POWER_OUTPUT_QUEUE_SIZE);
+		for (int j=0; j<POWER_OUTPUT_QUEUE_SIZE; j++)
+			queue_overwritePush(&(powerOutput[i]), 0.0);
+	}
+}
+
 void filter_init() {
 	// Init queues and fill them with 0s.
 	initXQueue();  // Call queue_init() on xQueue and fill it with zeros.
@@ -142,23 +155,45 @@ double filter_iirFilter(uint16_t filterNumber) {
 	}
 	z = bSum - aSum;
 	queue_overwritePush(&(zQueue[filterNumber]),z);
+	queue_overwritePush(&(powerOutput[filterNumber]),z);
 	return z;
 }
 
 // Use this to compute the power for values contained in a queue.
 // If force == true, then recompute everything from scratch.
 double filter_computePower(uint16_t filterNumber, bool forceComputeFromScratch, bool debugPrint) {
+	double power = 0;
+	if(forceComputeFromScratch) {
+		for(int i = 0; i < POWER_OUTPUT_QUEUE_SIZE; i++) {
+			power += queue_readElementAt(&(powerOutput[filterNumber]), i)*queue_readElementAt(&(powerOutput[filterNumber]), i);
+			currentPowerValue[filterNumber] = power;
+		}
+	} else { // Second subtraction does not need the multiply... Could be faster.
+		currentPowerValue[filterNumber] += queue_readElementAt(&(powerOutput[filterNumber]), POWER_OUTPUT_QUEUE_SIZE-1)*queue_readElementAt(&(powerOutput[filterNumber]), POWER_OUTPUT_QUEUE_SIZE-1);
+		currentPowerValue[filterNumber] -= queue_readElementAt(&(powerOutput[filterNumber]), 0)*queue_readElementAt(&(powerOutput[filterNumber]), 0);
+	}
 	return 0;
 }
 
 double filter_getCurrentPowerValue(uint16_t filterNumber) {
-	return 0;
+	return currentPowerValue[filterNumber];
 }
 
 // Uses the last computed-power values, scales them to the provided lowerBound and upperBound args, returns the index of element containing the max value.
 // The caller provides the normalizedArray that will contain the normalized values. indexOfMaxValue indicates the channel with max. power.
 void filter_getNormalizedPowerValues(double normalizedArray[], uint16_t* indexOfMaxValue) {
-
+	//	Normalizes the power values that are contained in currentPowerValue[] so that they are distributed between 0.0 and 1.0 and stores these normalized values in the array argument normalizedArray[]. To compute normalized values, simply find the largest value in the currentPowerValue[] array and divide all values stored in the array by the largest value.
+	//	Stores the index of the currentPowerValue[] that contains the highest power value in the argument indexOfMaxValue
+	int max = 0;
+	for(int i = 0; i < FILTER_IIR_FILTER_COUNT; i++) {
+		if(currentPowerValue[i] > currentPowerValue[max])
+			max = i;
+	}
+	printf("Max Value: %e\n\r", currentPowerValue[max]);
+	for(int i = 0; i < FILTER_IIR_FILTER_COUNT; i++) {
+		normalizedArray[i] = currentPowerValue[i]/currentPowerValue[max];
+	}
+	*indexOfMaxValue = max;
 }
 
 void filter_runTest() {
@@ -202,4 +237,38 @@ void filter_runTest() {
 			printf("First failure detected at filter: %d\n\r", failedFilter);
 		}
 	}
+#include "supportFiles/intervalTimer.h"
+	printf("Power Tests:\n\r");
+	double seconds;
+	for (int i=0; i<FILTER_IIR_FILTER_COUNT; i++) {
+		queue_init(&(powerOutput[i]), POWER_OUTPUT_QUEUE_SIZE);
+		for (int j=0; j<POWER_OUTPUT_QUEUE_SIZE; j++)
+			queue_overwritePush(&(powerOutput[i]), i);
+		intervalTimer_init(2);
+		intervalTimer_reset(2);
+		intervalTimer_start(2);
+		filter_computePower(i,true,false);
+		intervalTimer_stop(2);
+		intervalTimer_getTotalDurationInSeconds(2,&seconds);
+		printf("Scratch: %e\t", seconds);
+		for (int j=0; j<POWER_OUTPUT_QUEUE_SIZE; j++)
+			queue_overwritePush(&(powerOutput[i]), i);
+		intervalTimer_reset(2);
+		intervalTimer_start(2);
+		filter_computePower(i,false,false);
+		intervalTimer_stop(2);
+		intervalTimer_getTotalDurationInSeconds(2,&seconds);
+		printf("Efficient: %e\n\r", seconds);
+	}
+	printf("Current power values:\n\r");
+	for(int i = 0; i < FILTER_IIR_FILTER_COUNT; i++) {
+		printf("Power at index %d\t%e\n\r",i,filter_getCurrentPowerValue(i));
+	}
+	double norm[FILTER_IIR_FILTER_COUNT];
+	uint16_t maxIndex = 0;
+	filter_getNormalizedPowerValues(norm,&maxIndex);
+	for(int i = 0; i < FILTER_IIR_FILTER_COUNT; i++) {
+		printf("Normalized value at %d\t%e\n\r",i,norm[i]);
+	}
+	printf("Max index: %d\n\r", maxIndex);
 }
