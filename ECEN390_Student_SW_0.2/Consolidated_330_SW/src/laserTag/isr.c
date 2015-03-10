@@ -6,6 +6,9 @@
  */
 
 #include "transmitter.h"
+#include "hitLedTimer.h"
+#include "lockoutTimer.h"
+#include "trigger.h"
 #include "supportFiles/interrupts.h"
 #include "xsysmon.h"
 
@@ -23,6 +26,10 @@ void isr_function() {
 	// You will need to write the code that actually reads the ADC and stores the data in a queue.
 	// *********** Use this function to read the ADC: interrupts_getAdcData(); ********
 	isr_totalXadcSampleCount++;
+	transmitter_tick();
+	hitLedTimer_tick();
+	lockoutTimer_tick();
+	trigger_tick();
 }
 
 
