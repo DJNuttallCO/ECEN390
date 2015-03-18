@@ -92,7 +92,7 @@ void transmitter_tick() {
 	case high_st:
 		if(count == PULSE_LENGTH) {
 			enableFlag = false;
-			transmitter_set_jf1_to_one();
+			transmitter_set_jf1_to_zero();
 			transmitterState = init_st;
 		} else if(!(count % freq[freqIndex])) {
 			transmitter_set_jf1_to_zero();

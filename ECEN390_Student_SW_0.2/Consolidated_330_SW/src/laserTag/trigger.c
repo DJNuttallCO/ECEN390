@@ -89,7 +89,7 @@ void trigger_tick() {
 	case press_st:
 		if(count == DEBOUNCE_TIME) {
 			triggerState = waitRelease_st;
-			printf("D\n\r");
+			//printf("D\n\r");
 			transmitter_run();
 		}
 		break;
@@ -102,7 +102,7 @@ void trigger_tick() {
 	case release_st:
 		if(count == DEBOUNCE_TIME) {
 			enableFlag = false;
-			printf("U\n\r");
+			//printf("U\n\r");
 			triggerState = init_st;
 		}
 		break;
